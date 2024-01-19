@@ -13,7 +13,7 @@ struct ContentView: View {
             VStack {
                 Text("2024 Yearbook Wrapped")
                 NavigationLink("Check for Yearbook Purchase", destination: CheckView())
-                NavigationLink("Choose Yearbook Photo", destination: ChoosePhoto())
+                NavigationLink("Choose Yearbook Photo", destination: ChoosePhotoView())
                     .frame(width: 200, height: 100)
                 
             }
