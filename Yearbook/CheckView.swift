@@ -17,3 +17,5 @@ struct CheckView: View {
 #Preview {
     ChoosePhoto()
 }
+
+//Test
