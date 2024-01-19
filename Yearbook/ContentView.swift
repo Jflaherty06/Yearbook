@@ -13,7 +13,7 @@ struct ContentView: View {
             Text("2024 Yearbook Wrapped").fontWeight(.bold).font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/).multilineTextAlignment(.center)
             NavigationLink("Choose Yearbook Photo", destination: ChoosePhoto())
                 .frame(width: 300, height: 100).font(/*@START_MENU_TOKEN@*/.title3/*@END_MENU_TOKEN@*/)
-                
+             NavigationLink("buy yearbook", destination: BuyView())
         }
         .padding()
     }
