@@ -15,5 +15,5 @@ struct CheckView: View {
 }
 
 #Preview {
-    ChoosePhoto()
+    ChoosePhotoView()
 }

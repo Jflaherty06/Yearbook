@@ -8,14 +8,14 @@
 import Foundation
 import SwiftUI
 
-struct ChoosePhoto: View {
+struct ChoosePhotoView: View {
     var body: some View {
         Text("Placeholder")
     }
 }
 
 #Preview {
-    ChoosePhoto()
+    ChoosePhotoView()
 }
 
 
