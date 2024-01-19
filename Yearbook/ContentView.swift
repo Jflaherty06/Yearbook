@@ -20,7 +20,7 @@ struct ContentView: View {
                     .frame(width: 200, height: 100)
             }
             .padding()
-        }
+        }.toolbarRole(.navigationStack)
     }
 }
 
