@@ -15,7 +15,8 @@ struct ContentView: View {
                 NavigationLink("Check for Yearbook Purchase", destination: CheckView())
                 NavigationLink("Choose Yearbook Photo", destination: ChoosePhotoView())
                     .frame(width: 200, height: 100)
-                
+                NavigationLink("Buy yearbook", destination: BuyView())
+                    .frame(width: 200, height: 100)
             }
             .padding()
         }
