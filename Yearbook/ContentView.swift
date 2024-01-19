@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("2024 Yearbook Wrapped")
                 NavigationLink("Check for Yearbook Purchase", destination: CheckView())
@@ -20,7 +20,7 @@ struct ContentView: View {
                     .frame(width: 200, height: 100)
             }
             .padding()
-        }.toolbarRole(.navigationStack)
+        }
     }
 }
 
