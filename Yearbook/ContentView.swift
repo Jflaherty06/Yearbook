@@ -10,10 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            NavigationLink("Choose Yearbook Photo", destination: ChoosePhoto())
+                .frame(width: 200, height: 100)
+                
         }
         .padding()
     }
