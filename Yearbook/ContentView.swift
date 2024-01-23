@@ -10,22 +10,24 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        NavigationStack {
-            ZStack{
-                Image("")
-                    .ignoresSafeArea()
-            VStack {
-                Text("2024 Yearbook Wrapped")
-                NavigationLink("Check for Yearbook Purchase", destination: CheckView())
-                    .frame(width: 200, height: 100)
-                    .background()
-                NavigationLink("Buy yearbook", destination: BuyView())
-                    .frame(width: 200, height: 100)
-                NavigationLink("Choose Yearbook Photo", destination: ChoosePhotoView())
-                    .frame(width: 200, height: 100)
+        GeometryReader { geometry in
+            NavigationStack {
+                ZStack{
+                    Image("2024 cover design")
+                        .resizable()
+                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1)
+                    VStack {
+                        Text("2024 Yearbook Wrapped")
+                        NavigationLink("Check for Yearbook Purchase", destination: CheckView())
+                            .frame(width: 200, height: 100)
+                        NavigationLink("Buy yearbook", destination: BuyView())
+                            .frame(width: 200, height: 100)
+                        NavigationLink("Choose Yearbook Photo", destination: ChoosePhotoView())
+                            .frame(width: 200, height: 100)
+                    }
+                    .padding()
+                }
             }
-            .padding()
-        }
         }
     }
 }
