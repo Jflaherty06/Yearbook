@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 struct BuyView: View {
     var body: some View {
-        Text("  ")
+        let url = URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?&rID=0.8112661151077143&status=samlLoginThruCampus&lang=en")
     }
 }
 

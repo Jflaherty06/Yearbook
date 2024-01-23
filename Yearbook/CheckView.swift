@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 struct CheckView: View {
+    @State var StudentID = ""
     var body: some View {
-        Text("Placeholder")
+        TextField("Enter Student ID", text: $StudentID)
+       
     }
 }
 
