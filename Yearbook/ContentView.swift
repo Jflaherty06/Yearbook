@@ -19,12 +19,39 @@ struct ContentView: View {
                         .ignoresSafeArea()
                     VStack {
                         Text("2024 Yearbook Wrapped")
-                        NavigationLink("Check for Yearbook Purchase", destination: CheckView())
-                            .frame(width: 200, height: 100)
-                        NavigationLink("Buy yearbook", destination: BuyView())
-                            .frame(width: 200, height: 100)
-                        NavigationLink("Choose Yearbook Photo", destination: ChoosePhotoView())
-                            .frame(width: 200, height: 100)
+                        Group {
+                            NavigationLink(destination: CheckView()) {
+                                HStack {
+                                    Text(Image(systemName: "play.circle"))
+                                    Text("Check for Yearbook Purchase")
+                                }
+                                .font(.system(size: geometry.size.height * 0.02))
+                                .padding()
+                                .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                .foregroundColor(.white)
+                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.black))
+                            }
+                            NavigationLink(destination: BuyView()) {
+                                HStack {
+                                    Text(Image(systemName: "play.circle"))
+                                    Text("Buy yearbook")
+                                }
+                                    .font(.system(size: geometry.size.height * 0.02))
+                                    .padding()
+                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                    .foregroundColor(.black)
+                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                            }
+                            NavigationLink(destination: ChoosePhotoView()) {
+                                Text("Choose Yearbook Photo")
+                                    .font(.system(size: geometry.size.height * 0.02))
+                                    .padding()
+                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                    .foregroundColor(.white)
+                                    .background(RoundedRectangle(cornerRadius: 20.0))
+                            }
+                        }
+                        .padding()
                     }
                     .padding()
                 }
