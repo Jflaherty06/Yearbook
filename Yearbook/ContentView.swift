@@ -19,6 +19,11 @@ struct ContentView: View {
                         .ignoresSafeArea()
                     VStack {
                         Text("2024 Yearbook Wrapped")
+                            .font(.system(size: 60))
+                            .font(.title)
+                            .foregroundStyle(.white)
+                            .shadow(radius: 20)
+                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                         Group {
                             NavigationLink(destination: CheckView()) {
                                 HStack {
@@ -36,11 +41,11 @@ struct ContentView: View {
                                     Text(Image(systemName: "play.circle"))
                                     Text("Buy yearbook")
                                 }
-                                    .font(.system(size: geometry.size.height * 0.02))
-                                    .padding()
-                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                    .foregroundColor(.black)
-                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                .font(.system(size: geometry.size.height * 0.02))
+                                .padding()
+                                .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                .foregroundColor(.black)
+                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                             }
                             NavigationLink(destination: ChoosePhotoView()) {
                                 Text("Choose Yearbook Photo")
