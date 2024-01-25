@@ -18,6 +18,9 @@ struct ContentView: View {
                         .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1)
                     VStack {
                         Text("2024 Yearbook Wrapped")
+                            .font(.title)
+                            .foregroundStyle(.white)
+                    
                         NavigationLink("Check for Yearbook Purchase", destination: CheckView())
                             .frame(width: 200, height: 100)
                         NavigationLink("Buy yearbook", destination: BuyView())
