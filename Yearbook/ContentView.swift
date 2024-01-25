@@ -13,7 +13,7 @@ struct ContentView: View {
         GeometryReader { geometry in
             NavigationStack {
                 ZStack{
-                    Image("2024 cover design")
+                    Image("2024coverdesign")
                         .resizable()
                         .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
                         .ignoresSafeArea()
