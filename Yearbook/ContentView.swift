@@ -15,7 +15,8 @@ struct ContentView: View {
                 ZStack{
                     Image("2024 cover design")
                         .resizable()
-                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1)
+                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
+                        .ignoresSafeArea()
                     VStack {
                         Text("2024 Yearbook Wrapped")
                             .font(.title)
