@@ -13,14 +13,18 @@ struct ContentView: View {
         GeometryReader { geometry in
             NavigationStack {
                 ZStack{
-                    Image("2024 cover design")
+                    Image("2024coverdesign")
                         .resizable()
                         .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
                         .ignoresSafeArea()
                     VStack {
                         Text("2024 Yearbook Wrapped")
+                            .font(.system(size: 60))
                             .font(.title)
                             .foregroundStyle(.white)
+                            .shadow(radius: 20)
+                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                            
                     
                         NavigationLink("Check for Yearbook Purchase", destination: CheckView())
                             .frame(width: 200, height: 100)
