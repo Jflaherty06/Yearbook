@@ -33,8 +33,8 @@ struct ContentView: View {
                                 .font(.system(size: geometry.size.height * 0.02))
                                 .padding()
                                 .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                .foregroundColor(.white)
-                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.black))
+                                .foregroundColor(.black)
+                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                             }
                             NavigationLink(destination: BuyView()) {
                                 HStack {
@@ -52,8 +52,8 @@ struct ContentView: View {
                                     .font(.system(size: geometry.size.height * 0.02))
                                     .padding()
                                     .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                    .foregroundColor(.white)
-                                    .background(RoundedRectangle(cornerRadius: 20.0))
+                                    .foregroundColor(.black)
+                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                             }
                         }
                         .padding()
