@@ -12,8 +12,11 @@ struct CheckView: View {
     @State var StudentID = ""
     var body: some View {
         TextField("Enter Student ID", text: $StudentID)
-       
+        NavigationLink(destination: BuyView()) {
+            Text("Go to buy yearbook")
+        }
     }
+   
 }
 
 #Preview {
