@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import FirebaseDatabase
+import FirebaseDatabaseSwift
+
+class CheckViewModel: ObservableObject{
+    
+    
+}
