@@ -13,7 +13,6 @@ struct ChoosePhotoView: View {
         Text("Placeholder")
     }
 }
-
 #Preview {
     ChoosePhotoView()
 }

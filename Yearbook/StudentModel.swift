@@ -10,5 +10,5 @@ import FirebaseDatabase
 import FirebaseDatabaseSwift
 
 struct Student{
-    var idNumber: Int
+    var idNumber: String
 }
