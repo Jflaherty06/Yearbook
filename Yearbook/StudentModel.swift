@@ -9,6 +9,7 @@ import Foundation
 import FirebaseDatabase
 import FirebaseDatabaseSwift
 
-struct Student{
+
+struct Student {
     var idNumber: String
 }

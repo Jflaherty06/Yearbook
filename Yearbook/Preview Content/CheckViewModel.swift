@@ -9,17 +9,19 @@ import Foundation
 import FirebaseDatabase
 import FirebaseDatabaseSwift
 
-class CheckViewModel: ObservableObject{
-    @Published var idNumbers: [String] = []
+
+class CheckViewModel: ObservableObject {
+    @Published var idNumbers: [String]  = []
     
-    init(){
+    
+    init() {
         PullFromFirebase()
     }
     
     
-    
     func PullFromFirebase(){
-        let databaseRef = Database.database().reference().child("1FOnFtx0vEwNd-kuPY60Rb9ttB7eifLs8PlEtqkTwpxg").child("Sheet1")
+        let databaseRef = Database.database().reference().child("Sheet1")
+
         databaseRef.getData { myError, myDataSnapshot in
             var newList: [String] =  []
             for idNumber in myDataSnapshot?.children.allObjects as! [DataSnapshot] {
