@@ -32,38 +32,44 @@ struct CheckView: View {
                 }
                 
             }
-    label: {
-        Text("Check ID")
+        label: {
+            Text("Check ID")
+        }
+        .onSubmit {
+            StudentID = ""
+            
+        }
+            
+            Text(text)
+        }
     }
-    .onSubmit {
-        StudentID = ""
-        
-    }
-        
-        Text(text)
-    }
-}
-
-
-
-
-
+    
+    
+    
+    
+    
     func checkID(studentID: String) -> Bool{
         for number in viewModel.idNumbers{
             if studentID == number {
                 return true
             }
         }
+        return false
     }
-//=======
+}
+
+#Preview {
+    CheckView()
+}
+
 //        GeometryReader { geometry in
-//           
+//
 //            VStack{
 //                TextField("Enter Student ID", text: $StudentID)
 //                    .frame(maxWidth: 600, maxHeight: 20)
 //                    .font(.system(size: 30))
 //                    .padding()
-//                    
+//
 //                NavigationLink(destination: BuyView()) {
 //                    Text("Go to buy yearbook")
 //                        .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.1)
@@ -85,16 +91,7 @@ struct CheckView: View {
 //                    Text("check")
 //                }
 //            }
-//>>>>>>> main
 //        }
 //    }
 //    return false
 //}
-//
-//}
-
-#Preview {
-    CheckView()
-}
-
-
