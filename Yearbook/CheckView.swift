@@ -53,6 +53,8 @@ struct CheckView: View {
     
     
     
+    
+    
     func checkID(studentID: String) -> Bool{
         for number in viewModel.idNumbers{
             var num = number
