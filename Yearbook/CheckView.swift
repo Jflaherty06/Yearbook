@@ -19,6 +19,8 @@ struct CheckView: View {
     var body: some View {
         VStack {
             TextField("Enter Student ID", text: $StudentID)
+//
+//
             Button {
                 var answer = checkID(studentID: StudentID)
                 if answer == true {
