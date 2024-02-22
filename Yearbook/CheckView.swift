@@ -10,28 +10,41 @@ import SwiftUI
 
 struct CheckView: View {
     
-    
     @ObservedObject var viewModel  = CheckViewModel()
-    
     @State var StudentID = ""
     @State var purchased:Bool = true
     @State var text = ""
+    @State var showingAlert = false
+    
     var body: some View {
         VStack {
             TextField("Enter Student ID", text: $StudentID)
-//
-//
+                .onSubmit {
+                    let answer = checkID(studentID: StudentID)
+                    if answer == true {
+                        text = "You have not purchased a yearbook"
+                    } else if answer == false {
+                        text = "You have purchased a yearbook, thank you!"
+                    }
+                    showingAlert =  true
+                }
+                .alert("\(text)", isPresented: $showingAlert) {
+                    Button("Ok", role: .cancel) { }
+                }
             Button {
-                var answer = checkID(studentID: StudentID)
+                let answer = checkID(studentID: StudentID)
                 if answer == true {
                     text = "You have not purchased a yearbook"
                 } else if answer == false {
                     text = "You have purchased a yearbook, thank you!"
                 }
-                Alert(title: Text(""), message: Text("\(text)"), dismissButton: .cancel())
+                showingAlert =  true
             } label: {
-            Text("Check ID")
-        }
+                Text("Check ID")
+            }
+            .alert("\(text)", isPresented: $showingAlert) {
+                Button("Ok", role: .cancel) { }
+            }
             NavigationLink(destination: BuyView()) {
                 Text("Buy a Yearbook")
             }
@@ -46,7 +59,7 @@ struct CheckView: View {
         for number in viewModel.idNumbers{
             var num = number
             if number == studentID {
-               return true
+                return true
             }
         }
         return false

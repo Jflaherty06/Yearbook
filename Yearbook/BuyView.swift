@@ -27,6 +27,13 @@ struct BuyView: View {
 
             
         } .padding()
+        Text("To buy a yearbook, please follow the directions below!")
+            .font(.system(size: 17))
+            .foregroundStyle(.black)
+        Text("1. Click on the link to get to Infinite Campus.")
+        Text("2. On the side bar, click on the option 'Fees'.")
+        Text("3. In your shopping cart, add a yearbook.")
+    
     }
     struct SafariWebView: UIViewControllerRepresentable {
         let url: URL
