@@ -23,7 +23,6 @@ class CheckViewModel: ObservableObject {
     
     func PullFromFirebase(){
         let databaseRef = Database.database().reference().child("1FOnFtx0vEwNd-kuPY60Rb9ttB7eifLs8PlEtqkTwpxg").child("Sheet1")
-
         databaseRef.getData { myError, myDataSnapshot in
             var newList: [String] =  []
             for idNumber in myDataSnapshot?.children.allObjects as! [DataSnapshot] {
