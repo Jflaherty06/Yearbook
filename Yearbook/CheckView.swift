@@ -30,6 +30,9 @@ struct CheckView: View {
                 }
                 .alert("\(text)", isPresented: $showingAlert) {
                     Button("Ok", role: .cancel) { }
+                    NavigationLink(destination: BuyView()) {
+                        Text("Buy a Yearbook")
+                    }
                 }
             Button {
                 let answer = checkID(studentID: StudentID)
