@@ -14,21 +14,17 @@ struct BuyView: View {
     
     var body: some View {
         
-        VStack {
-            Button("Open Webview") {
-                isPresentWebView  = true
-            }.sheet(isPresented: $isPresentWebView) {
-                NavigationStack {
-                    WebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
-                        .ignoresSafeArea()
-                        .navigationTitle("Infinite Campus")
-                        .navigationBarTitleDisplayMode(.inline)
-                    Text("--------------------------------\nTo buy a yearbook do this\nThen do this\nAnd finally do this")
-                }
-            }
+        
+        NavigationStack {
+            WebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
+                .frame(width:780, height: 600)
+                .navigationTitle("Infinite Campus")
+                .navigationBarTitleDisplayMode(.inline)
+            Text("--------------------------------\nTo buy a yearbook do this\nThen do this\nAnd finally do this")
         }
     }
 }
+
 
 
 #Preview {

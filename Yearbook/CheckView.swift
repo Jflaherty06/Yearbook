@@ -55,9 +55,8 @@ struct CheckView: View {
     
     
     
-    func checkID(studentID: String) -> Bool{
+    func checkID(studentID: String) -> Bool {
         for number in viewModel.idNumbers{
-            var num = number
             if number == studentID {
                 return true
             }
