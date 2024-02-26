@@ -17,9 +17,34 @@ struct CheckView: View {
     @State var showingAlert = false
     
     var body: some View {
-        VStack {
-            TextField("Enter Student ID", text: $StudentID)
-                .onSubmit {
+        GeometryReader { geometry in
+            VStack {
+                Text("Check for Yearbook Purchase")
+                    .font(.system(size: 60))
+                    .padding()
+                    .font(.title)
+                    .foregroundStyle(.black)
+                    .shadow(radius: 20)
+                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                TextField("Enter Student ID", text: $StudentID)
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
+                    .onSubmit {
+                        let answer = checkID(studentID: StudentID)
+                        if answer == true {
+                            text = "You have not purchased a yearbook"
+                        } else if answer == false {
+                            text = "You have purchased a yearbook, thank you!"
+                        }
+                        showingAlert =  true
+                    }
+                    .alert("\(text)", isPresented: $showingAlert) {
+                        Button("Ok", role: .cancel) { }
+                        NavigationLink(destination: BuyView()) {
+                            Text("Buy a Yearbook")
+                        }
+                    }
+                Button {
                     let answer = checkID(studentID: StudentID)
                     if answer == true {
                         text = "You have not purchased a yearbook"
@@ -27,29 +52,31 @@ struct CheckView: View {
                         text = "You have purchased a yearbook, thank you!"
                     }
                     showingAlert =  true
+                } label: {
+                    HStack {
+                        Text(Image(systemName: "play.circle"))
+                        Text("Check ID")
+                    }
+                    .font(.system(size: geometry.size.height * 0.02))
+                    .padding()
+                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                    .foregroundColor(.black)
+                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                 }
                 .alert("\(text)", isPresented: $showingAlert) {
                     Button("Ok", role: .cancel) { }
-                    NavigationLink(destination: BuyView()) {
+                }
+                NavigationLink(destination: BuyView()) {
+                    HStack {
+                        Text(Image(systemName: "play.circle"))
                         Text("Buy a Yearbook")
                     }
+                    .font(.system(size: geometry.size.height * 0.02))
+                    .padding()
+                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                    .foregroundColor(.black)
+                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                 }
-            Button {
-                let answer = checkID(studentID: StudentID)
-                if answer == true {
-                    text = "You have not purchased a yearbook"
-                } else if answer == false {
-                    text = "You have purchased a yearbook, thank you!"
-                }
-                showingAlert =  true
-            } label: {
-                Text("Check ID")
-            }
-            .alert("\(text)", isPresented: $showingAlert) {
-                Button("Ok", role: .cancel) { }
-            }
-            NavigationLink(destination: BuyView()) {
-                Text("Buy a Yearbook")
             }
         }
     }
@@ -57,10 +84,8 @@ struct CheckView: View {
     
     
     
-    
     func checkID(studentID: String) -> Bool{
         for number in viewModel.idNumbers{
-            var num = number
             if number == studentID {
                 return true
             }

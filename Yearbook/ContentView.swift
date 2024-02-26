@@ -47,17 +47,17 @@ struct ContentView: View {
                                 .foregroundColor(.black)
                                 .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                             }
-                            NavigationLink(destination: ChoosePhotoView()) {
-                                HStack {
-                                    Text(Image(systemName: "play.circle"))
-                                    Text("Choose Yearbook Photo")
-                                }
-                                    .font(.system(size: geometry.size.height * 0.02))
-                                    .padding()
-                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                    .foregroundColor(.black)
-                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                            }
+//                            NavigationLink(destination: ChoosePhotoView()) {
+//                                HStack {
+//                                    Text(Image(systemName: "play.circle"))
+//                                    Text("Choose Yearbook Photo")
+//                                }
+//                                    .font(.system(size: geometry.size.height * 0.02))
+//                                    .padding()
+//                                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+//                                    .foregroundColor(.black)
+//                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+//                            }
                         }
                         .padding()
                     }

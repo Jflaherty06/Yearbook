@@ -82,11 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				AABA35702B2235500030966B /* YearbookApp.swift */,
-				0C874EC32B5ADF8B00746D82 /* BuyView.swift */,
 				AABA35722B2235500030966B /* ContentView.swift */,
+				0C874EC32B5ADF8B00746D82 /* BuyView.swift */,
+				8C5F28042B5ADB7C000C44F7 /* CheckView.swift */,
 				8CFA61EB2B7297BD0067BA75 /* CheckViewModel.swift */,
 				E1D469402B72A122001F08CB /* StudentModel.swift */,
-				8C5F28042B5ADB7C000C44F7 /* CheckView.swift */,
 				E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */,
 				AABA35742B2235530030966B /* Assets.xcassets */,
 				E13680492B6D4FA4002E8EA5 /* GoogleService-Info.plist */,
