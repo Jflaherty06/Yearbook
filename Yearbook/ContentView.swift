@@ -54,34 +54,32 @@ struct ContentView: View {
                                         .foregroundColor(.black)
                                         .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                     }
-                                    NavigationLink(destination: ChoosePhotoView()) {
-                                        HStack {
-                                            Text(Image(systemName: "play.circle"))
-                                            Text("Choose Yearbook Photo")
-                                        }
-                                        .font(.system(size: geometry.size.height * 0.02))
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                        .foregroundColor(.black)
-                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                    }
+//                                    NavigationLink(destination: ChoosePhotoView()) {
+//                                        HStack {
+//                                            Text(Image(systemName: "play.circle"))
+//                                            Text("Choose Yearbook Photo")
+//                                        }
+//                                        .font(.system(size: geometry.size.height * 0.02))
+//                                        .padding()
+//                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+//                                        .foregroundColor(.black)
+//                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+//                                    }
                                 }
                                 .padding()
                             }
                             .padding()
-                            ZStack{
-                                Button("<---") {
-                                    instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
-                                    x = 400
-                                    y = .infinity
-                                }
-                                VStack{
-                                    Text(instructions)
-                                }
-                                .frame(width: x, height: y)
-                                
-                                
-                            }
+//                            ZStack{
+//                                Button("<---") {
+//                                    instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
+//                                    x = 400
+//                                    y = .infinity
+//                                }
+//                                VStack{
+//                                    Text(instructions)
+//                                }
+//                                .frame(width: x, height: y)
+//                            }
                         }
                     }
                 }
