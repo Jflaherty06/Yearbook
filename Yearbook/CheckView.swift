@@ -55,6 +55,7 @@ struct CheckView: View {
                         text = "You have purchased a yearbook, thank you!"
                     }
                     showingAlert =  true
+                    StudentID = ""
                 } label: {
                     HStack {
                         Text(Image(systemName: "play.circle"))
@@ -68,6 +69,7 @@ struct CheckView: View {
                 }
                 .alert("\(text)", isPresented: $showingAlert) {
                     Button("Ok", role: .cancel) { StudentID = "" }
+                    NavigationLink(destination: BuyView()) { Text("Buy a Yearbook") }
                 }
                 NavigationLink(destination: BuyView()) {
                     HStack {
