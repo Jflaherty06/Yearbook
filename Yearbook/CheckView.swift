@@ -19,18 +19,27 @@ struct CheckView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Group {
-                    Text("Check for Yearbook")
-                    Text("Purchase")
+               Group {
+                   VStack(spacing: 5) {
+                       Text("Check for Yearbook")
+                       //                       .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.2, alignment: .center)
+                       Text("Purchase")
+                       //                       .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1, alignment: .center)
+                   }
                 }
-                .font(.system(size: 60))
+              
+//                .font(.system(size: 60))
                 .padding()
-                .font(.title)
-                .foregroundStyle(.black)
+                .font(.custom(
+                "Arial", fixedSize: 60))
+                .foregroundStyle(.orange)
                 .shadow(radius: 20)
-                .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.2, alignment: .center)
+                .padding()
                 TextField("Enter Student ID", text: $StudentID)
                     .textFieldStyle(.roundedBorder)
+                    .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.1)
+                    .font(.system(size: 50))
                     .padding()
                     .onSubmit {
                         let answer = checkID(studentID: StudentID)
