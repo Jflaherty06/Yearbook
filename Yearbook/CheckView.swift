@@ -27,7 +27,8 @@ struct CheckView: View {
                 .padding()
                 .font(.title)
                 .foregroundStyle(.black)
-                .shadow(radius: 20)
+                .background(.gray)
+                 .shadow(radius: 20)
                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                 TextField("Enter Student ID", text: $StudentID)
                     .textFieldStyle(.roundedBorder)
@@ -90,7 +91,7 @@ struct CheckView: View {
     
     
     func checkID(studentID: String) -> Bool{
-        for number in viewModel.idNumbers{
+        for number in viewModel.idNumbers {
             if number == studentID {
                 return true
             }
