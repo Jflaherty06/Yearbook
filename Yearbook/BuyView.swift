@@ -16,7 +16,7 @@ struct BuyView: View {
         GeometryReader { geometry in
             VStack() {
                 Text("Buy a Yearbook")
-                    .font(.system(size: 60))
+                    .background(.gray)
                     .padding()
                     .font(.title)
                     .foregroundStyle(.black)
@@ -34,6 +34,7 @@ struct BuyView: View {
                 Text("1. Click on the link to get to Infinite Campus.")
                 Text("2. On the side bar, click on the option 'Fees'.")
                 Text("3. In your shopping cart, add a yearbook.")
+                Text("If it shows zero dollars, that means you have no fees left to pay, indicating that you have already bought one.")
             }
         }
     }
