@@ -90,7 +90,7 @@ struct CheckView: View {
     
     
     func checkID(studentID: String) -> Bool{
-        for number in viewModel.idNumbers{
+        for number in viewModel.idNumbers {
             if number == studentID {
                 return true
             }

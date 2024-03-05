@@ -17,70 +17,92 @@ struct ContentView: View {
         GeometryReader { geometry in
             NavigationStack {
                 ZStack {
-                    Image("2024coverdesign")
-                        .resizable()
-                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
+                    Color.gray
                         .ignoresSafeArea()
+                    //                    Image("2024coverdesign")
+                    //                        .resizable()
+                    //                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
+                    //                        .ignoresSafeArea()
                     VStack{
                         HStack{
                             
                             VStack {
-                                Text("2024 Yearbook Wrapped")
-                                    .font(.system(size: 60))
-                                    .font(.title)
-                                    .foregroundStyle(.white)
-                                    .shadow(radius: 20)
-                                    .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                HStack{
+                                    Text("2024 Yearbook Wrapped")
+                                        .font(.system(size: 60))
+                                        .font(.title)
+                                        .foregroundStyle(.white)
+                                        .shadow(radius: 20)
+//                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                        .fontWeight(.bold)
+                                        .padding()
+                                    
+                                    Spacer()
+                                }
+                                Image("hersey")
+                                    .resizable()
+                                    .frame(width: 120, height: 120)
+                                    .scaledToFill()
                                 Group {
+                                    HStack{
                                     NavigationLink(destination: CheckView()) {
                                         HStack {
                                             Text(Image(systemName: "play.circle"))
+                                                .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
                                             Text("Check for Yearbook Purchase")
-                                        }
-                                        .font(.system(size: geometry.size.height * 0.02))
+                                            .foregroundColor(.orange)                                        }
+                                        .font(.system(size: geometry.size.height * 0.032))
                                         .padding()
-                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                        .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
                                         .foregroundColor(.black)
+                                        .textFieldStyle(.roundedBorder)
                                         .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                        
                                     }
-                                    NavigationLink(destination: BuyView()) {
-                                        HStack {
-                                            Text(Image(systemName: "play.circle"))
-                                            Text("Buy yearbook")
+                                        Spacer()
+                                }
+                                    HStack{
+                                        NavigationLink(destination: BuyView()) {
+                                            HStack {
+                                                Text(Image(systemName: "play.circle"))
+                                                Text("Buy yearbook")
+                                            }
+                                            .font(.system(size: geometry.size.height * 0.032))
+                                            .padding()
+                                            .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                            .foregroundColor(.black)
+                                            .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                         }
-                                        .font(.system(size: geometry.size.height * 0.02))
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                        .foregroundColor(.black)
-                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                        Spacer()
                                     }
-//                                    NavigationLink(destination: ChoosePhotoView()) {
-//                                        HStack {
-//                                            Text(Image(systemName: "play.circle"))
-//                                            Text("Choose Yearbook Photo")
-//                                        }
-//                                        .font(.system(size: geometry.size.height * 0.02))
-//                                        .padding()
-//                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-//                                        .foregroundColor(.black)
-//                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-//                                    }
+                                    //                                    NavigationLink(destination: ChoosePhotoView()) {
+                                    //                                        HStack {
+                                    //                                            Text(Image(systemName: "play.circle"))
+                                    //                                            Text("Choose Yearbook Photo")
+                                    //                                        }
+                                    //                                        .font(.system(size: geometry.size.height * 0.02))
+                                    //                                        .padding()
+                                    //                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                    //                                        .foregroundColor(.black)
+                                    //                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                    //                                    }
                                 }
                                 .padding()
                             }
                             .padding()
-//                            ZStack{
-//                                Button("<---") {
-//                                    instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
-//                                    x = 400
-//                                    y = .infinity
-//                                }
-//                                VStack{
-//                                    Text(instructions)
-//                                }
-//                                .frame(width: x, height: y)
-//                            }
+                            //                            ZStack{
+                            //                                Button("<---") {
+                            //                                    instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
+                            //                                    x = 400
+                            //                                    y = .infinity
+                            //                                }
+                            //                                VStack{
+                            //                                    Text(instructions)
+                            //                                }
+                            //                                .frame(width: x, height: y)
+                            //                            }
                         }
+                        Spacer()
                     }
                 }
             }
