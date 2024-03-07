@@ -73,6 +73,7 @@ struct CheckView: View {
                     .font(.system(size: geometry.size.height * 0.02))
                     .padding()
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                    .background(Color.orange)
                     .foregroundColor(.black)
                     .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                 }
@@ -88,6 +89,7 @@ struct CheckView: View {
                     .font(.system(size: geometry.size.height * 0.02))
                     .padding()
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                    .background(Color.orange)
                     .foregroundColor(.black)
                     .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                 }
