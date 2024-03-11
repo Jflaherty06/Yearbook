@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State var x = 0.0
     @State var y = 0.0
-    @State var  instructions = ""
+    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
     var body: some View {
         
         GeometryReader { geometry in
@@ -89,17 +89,23 @@ struct ContentView: View {
                                 .padding()
                             }
                             .padding()
-                            //                            ZStack{
-                            //                                Button("<---") {
-                            //                                    instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
-                            //                                    x = 400
-                            //                                    y = .infinity
-                            //                                }
-                            //                                VStack{
-                            //                                    Text(instructions)
-                            //                                }
-                            //                                .frame(width: x, height: y)
-                            //                            }
+                            VStack(alignment: .trailing) {
+                                HStack {
+                                    Button {
+                                        x = 400
+                                        y = geometry.size.height * 1
+                                    } label: {
+                                        Text("\(Image(systemName: "arrowshape.left.fill"))")
+                                            .font(.system(size: 20))
+                                            .foregroundColor(.orange)
+                                    }
+                                    VStack {
+                                        Text(instructions)
+                                            .padding()
+                                    }
+                                    .frame(width: x, height: y)
+                                }
+                            }
                         }
                         Spacer()
                     }
