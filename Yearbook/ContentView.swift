@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     
     @State var x = 0.0
     @State var y = 0.0
-    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs, for any questions please contact Mr.Lane rich.lane@d214.org"
+    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
+    @State var poppedOut = false
+    @State var buttonOrientation = "left"
+
     var body: some View {
-        
+
         GeometryReader { geometry in
             NavigationView {
                 NavigationStack {
@@ -35,53 +37,53 @@ struct ContentView: View {
                                     //                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                         .fontWeight(.bold)
                                         .padding()
-                                    
-                                    Spacer()
-                                }
-                                Image("hersey")
-                                    .resizable()
-                                    .frame(width: 180, height: 180)
-                                    .scaledToFill()
-                                Group {
-                                    HStack{
-                                    NavigationLink(destination: CheckView()) {
+                                    Image("hersey")
+                                        .resizable()
+                                        .frame(width: 120, height: 120)
+                                        .scaledToFill()
+                                    Group {
                                         HStack {
-                                        
-                                            Text("Check for Yearbook Purchase")
-                                            .foregroundColor(.orange)                                        }
-                                        .font(.system(size: geometry.size.height * 0.032))
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                        .foregroundColor(.black)
-                                        .textFieldStyle(.roundedBorder)
-                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                        
-                                    }
-                                    HStack{
-                                        NavigationLink(destination: BuyView()) {
-                                            HStack {
-                                               
-                                                Text("Buy yearbook")
+                                            NavigationLink(destination: CheckView()) {
+                                                HStack {
+                                                    Text(Image(systemName: "play.circle"))
+                                                        .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
+                                                    Text("Check for Yearbook Purchase")
+                                                    .foregroundColor(.orange)                                        }
+                                                .font(.system(size: geometry.size.height * 0.032))
+                                                .padding()
+                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                                .foregroundColor(.black)
+                                                .textFieldStyle(.roundedBorder)
+                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+
                                             }
-                                            .font(.system(size: geometry.size.height * 0.032))
-                                            .padding()
-                                            .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                            .foregroundColor(.black)
-                                            .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                         }
-                                        Spacer()
+                                        HStack{
+                                            NavigationLink(destination: BuyView()) {
+                                                HStack {
+                                                    Text(Image(systemName: "play.circle"))
+                                                    Text("Buy yearbook")
+                                                }
+                                                .font(.system(size: geometry.size.height * 0.032))
+                                                .padding()
+                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                                .foregroundColor(.black)
+                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            }
+                                        }
+                                        //                                    NavigationLink(destination: ChoosePhotoView()) {
+                                        //                                        HStack {
+                                        //                                            Text(Image(systemName: "play.circle"))
+                                        //                                            Text("Choose Yearbook Photo")
+                                        //                                        }
+                                        //                                        .font(.system(size: geometry.size.height * 0.02))
+                                        //                                        .padding()
+                                        //                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                        //                                        .foregroundColor(.black)
+                                        //                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                        //                                    }
                                     }
-                                    //                                    NavigationLink(destination: ChoosePhotoView()) {
-                                    //                                        HStack {
-                                    //                                            Text(Image(systemName: "play.circle"))
-                                    //                                            Text("Choose Yearbook Photo")
-                                    //                                        }
-                                    //                                        .font(.system(size: geometry.size.height * 0.02))
-                                    //                                        .padding()
-                                    //                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                    //                                        .foregroundColor(.black)
-                                    //                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                    //                                    }
+                                    .padding()
                                 }
                                 .padding()
                                 VStack(alignment: .trailing) {
@@ -98,7 +100,7 @@ struct ContentView: View {
                                                 x = 400
                                                 y = geometry.size.height * 1
                                             }
-                                            
+
                                         } label: {
                                             Text("\(Image(systemName: "arrowshape.\(buttonOrientation).fill"))")
                                                 .font(.system(size: 20))
@@ -121,7 +123,6 @@ struct ContentView: View {
         }
     }
 }
-
 #Preview {
     ContentView()
 }
