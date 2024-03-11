@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @State var x = 0.0
     @State var y = 0.0
-    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
+    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs, for any questions please contact Mr.Lane rich.lane@d214.org"
     var body: some View {
         
         GeometryReader { geometry in
