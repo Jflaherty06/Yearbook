@@ -33,7 +33,7 @@ struct ContentView: View {
                                         .font(.title)
                                         .foregroundStyle(.white)
                                         .shadow(radius: 20)
-//                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                    //                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                         .fontWeight(.bold)
                                         .padding()
                                     
@@ -41,26 +41,25 @@ struct ContentView: View {
                                 }
                                 Image("hersey")
                                     .resizable()
-                                    .frame(width: 120, height: 120)
+                                    .frame(width: 180, height: 180)
                                     .scaledToFill()
                                 Group {
                                     HStack{
-                                    NavigationLink(destination: CheckView()) {
-                                        HStack {
-                                            Text(Image(systemName: "play.circle"))
-                                                .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
-                                            Text("Check for Yearbook Purchase")
-                                            .foregroundColor(.orange)                                        }
-                                        .font(.system(size: geometry.size.height * 0.032))
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                        .foregroundColor(.black)
-                                        .textFieldStyle(.roundedBorder)
-                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                        
-                                    }
+                                        NavigationLink(destination: CheckView()) {
+                                            HStack {
+                                                Text(Image(systemName: "play.circle"))
+                                                Text("Check for Yearbook Purchase")
+                                            }
+                                            .font(.system(size: geometry.size.height * 0.032))
+                                            .padding()
+                                            .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                            .foregroundColor(.black)
+                                            .textFieldStyle(.roundedBorder)
+                                            .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            
+                                        }
                                         Spacer()
-                                }
+                                    }
                                     HStack{
                                         NavigationLink(destination: BuyView()) {
                                             HStack {
