@@ -11,15 +11,14 @@ import FirebaseDatabaseSwift
 
 
 class CheckViewModel: ObservableObject {
-    @Published var idNumbers: [String]  = []
     
+    @Published var idNumbers: [String]  = []
     
     init() {
         PullFromFirebase()
         print(idNumbers)
         print("Hello")
     }
-    
     
     func PullFromFirebase(){
         let databaseRef = Database.database().reference().child("1FOnFtx0vEwNd-kuPY60Rb9ttB7eifLs8PlEtqkTwpxg").child("Sheet1")

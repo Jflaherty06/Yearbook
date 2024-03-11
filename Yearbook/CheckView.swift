@@ -19,8 +19,12 @@ struct CheckView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack {
+                Color.gray
+                    .ignoresSafeArea()
                Group {
                    VStack(spacing: 5) {
+                       Color.gray
+                           .ignoresSafeArea()
                        Text("Check for Yearbook")
                        //                       .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.2, alignment: .center)
                        Text("Purchase")
@@ -40,6 +44,7 @@ struct CheckView: View {
                     .textFieldStyle(.roundedBorder)
                     .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.1)
                     .font(.system(size: 50))
+                    .background(.gray)
                     .padding()
                     .onSubmit {
                         let answer = checkID(studentID: StudentID)
@@ -67,14 +72,15 @@ struct CheckView: View {
                     StudentID = ""
                 } label: {
                     HStack {
-                        Text(Image(systemName: "play.circle"))
+                       
                         Text("Check ID")
                     }
                     .font(.system(size: geometry.size.height * 0.02))
                     .padding()
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                    .background(Color.orange)
                     .foregroundColor(.black)
-                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.orange))
                 }
                 .alert("\(text)", isPresented: $showingAlert) {
                     Button("Ok", role: .cancel) { StudentID = "" }
@@ -82,14 +88,15 @@ struct CheckView: View {
                 }
                 NavigationLink(destination: BuyView()) {
                     HStack {
-                        Text(Image(systemName: "play.circle"))
+                        
                         Text("Buy a Yearbook")
                     }
                     .font(.system(size: geometry.size.height * 0.02))
                     .padding()
                     .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                    .background(Color.orange)
                     .foregroundColor(.black)
-                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.orange))
                 }
             }
         }
@@ -98,7 +105,7 @@ struct CheckView: View {
     
     
     
-    func checkID(studentID: String) -> Bool{
+    func checkID(studentID: String) -> Bool {
         for number in viewModel.idNumbers {
             if number == studentID {
                 return true
