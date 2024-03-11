@@ -47,8 +47,7 @@ struct ContentView: View {
                                     HStack{
                                     NavigationLink(destination: CheckView()) {
                                         HStack {
-                                            Text(Image(systemName: "play.circle"))
-                                                .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
+                                        
                                             Text("Check for Yearbook Purchase")
                                             .foregroundColor(.orange)                                        }
                                         .font(.system(size: geometry.size.height * 0.032))
@@ -64,7 +63,7 @@ struct ContentView: View {
                                     HStack{
                                         NavigationLink(destination: BuyView()) {
                                             HStack {
-                                                Text(Image(systemName: "play.circle"))
+                                               
                                                 Text("Buy yearbook")
                                             }
                                             .font(.system(size: geometry.size.height * 0.032))

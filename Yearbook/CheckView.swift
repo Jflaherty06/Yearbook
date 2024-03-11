@@ -67,7 +67,7 @@ struct CheckView: View {
                     StudentID = ""
                 } label: {
                     HStack {
-                        Text(Image(systemName: "play.circle"))
+                       
                         Text("Check ID")
                     }
                     .font(.system(size: geometry.size.height * 0.02))
@@ -83,7 +83,7 @@ struct CheckView: View {
                 }
                 NavigationLink(destination: BuyView()) {
                     HStack {
-                        Text(Image(systemName: "play.circle"))
+                        
                         Text("Buy a Yearbook")
                     }
                     .font(.system(size: geometry.size.height * 0.02))
