@@ -33,7 +33,7 @@ struct ContentView: View {
                                         .font(.title)
                                         .foregroundStyle(.white)
                                         .shadow(radius: 20)
-//                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                    //                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                         .fontWeight(.bold)
                                         .padding()
                                     
@@ -41,7 +41,7 @@ struct ContentView: View {
                                 }
                                 Image("hersey")
                                     .resizable()
-                                    .frame(width: 120, height: 120)
+                                    .frame(width: 180, height: 180)
                                     .scaledToFill()
                                 Group {
                                     HStack{
@@ -58,8 +58,6 @@ struct ContentView: View {
                                         .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                         
                                     }
-                                        Spacer()
-                                }
                                     HStack{
                                         NavigationLink(destination: BuyView()) {
                                             HStack {
