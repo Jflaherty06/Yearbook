@@ -14,8 +14,9 @@
 		AABA35732B2235500030966B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABA35722B2235500030966B /* ContentView.swift */; };
 		AABA35752B2235530030966B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABA35742B2235530030966B /* Assets.xcassets */; };
 		AABA35782B2235530030966B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABA35772B2235530030966B /* Preview Assets.xcassets */; };
-		E10783552B87AF1A0051DF7E /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10783542B87AF1A0051DF7E /* WebView.swift */; };
+		E10783552B87AF1A0051DF7E /* InfiniteCampusWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */; };
 		E11F78422B5ADA7500B4B83B /* ChoosePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */; };
+		E133C7332BAB3E41007E7DA8 /* VipPhotosWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */; };
 		E136804A2B6D4FA4002E8EA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E13680492B6D4FA4002E8EA5 /* GoogleService-Info.plist */; };
 		E136804D2B6D5094002E8EA5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E136804C2B6D5094002E8EA5 /* FirebaseAnalytics */; };
 		E136804F2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E136804E2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -36,8 +37,9 @@
 		AABA35722B2235500030966B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AABA35742B2235530030966B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AABA35772B2235530030966B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E10783542B87AF1A0051DF7E /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCampusWebView.swift; sourceTree = "<group>"; };
 		E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoView.swift; sourceTree = "<group>"; };
+		E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipPhotosWebView.swift; sourceTree = "<group>"; };
 		E13680492B6D4FA4002E8EA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D469402B72A122001F08CB /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +65,7 @@
 		AABA35642B2235500030966B = {
 			isa = PBXGroup;
 			children = (
-				E10783542B87AF1A0051DF7E /* WebView.swift */,
+				E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */,
 				AABA356F2B2235500030966B /* Yearbook */,
 				AABA356E2B2235500030966B /* Products */,
 				E1D4693B2B729FB3001F08CB /* Frameworks */,
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				AABA35702B2235500030966B /* YearbookApp.swift */,
+				E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */,
 				AABA35722B2235500030966B /* ContentView.swift */,
 				0C874EC32B5ADF8B00746D82 /* BuyView.swift */,
 				8C5F28042B5ADB7C000C44F7 /* CheckView.swift */,
@@ -194,8 +197,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1D469412B72A122001F08CB /* StudentModel.swift in Sources */,
-				E10783552B87AF1A0051DF7E /* WebView.swift in Sources */,
+				E10783552B87AF1A0051DF7E /* InfiniteCampusWebView.swift in Sources */,
 				AABA35732B2235500030966B /* ContentView.swift in Sources */,
+				E133C7332BAB3E41007E7DA8 /* VipPhotosWebView.swift in Sources */,
 				8CFA61EC2B7297BD0067BA75 /* CheckViewModel.swift in Sources */,
 				E11F78422B5ADA7500B4B83B /* ChoosePhotoView.swift in Sources */,
 				AABA35712B2235500030966B /* YearbookApp.swift in Sources */,

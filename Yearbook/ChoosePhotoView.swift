@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ChoosePhotoView: View {
     var body: some View {
-        Text("Placeholder")
+        NavigationStack{
+            VipPhotosWebView(url: URL(string: "https://www.vipis.com/group/9bb336c8/john-hersey-high-school")!)
+        }
     }
 }
 #Preview {
