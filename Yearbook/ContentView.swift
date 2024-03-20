@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     
     @State var x = 0.0
     @State var y = 0.0
-    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs, for any questions please contact Mr.Lane rich.lane@d214.org"
+    @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
+    @State var poppedOut = false
+    @State var buttonOrientation = "left"
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -24,8 +26,7 @@ struct ContentView: View {
                     //                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
                     //                        .ignoresSafeArea()
                     VStack{
-                        HStack{
-                            
+                        ZStack(alignment: .trailing) {
                             VStack {
                                 HStack{
                                     Text("2024 Yearbook Wrapped")
@@ -42,11 +43,27 @@ struct ContentView: View {
                                 }
                                 Image("hersey")
                                     .resizable()
-                                    .frame(width: 180, height: 180)
+                                    .frame(width: 120, height: 120)
                                     .scaledToFill()
                                 Group {
                                     HStack{
                                         NavigationLink(destination: CheckView()) {
+                                            HStack {
+                                                Text(Image(systemName: "play.circle"))
+                                                    .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
+                                                Text("Check for Yearbook Purchase")
+                                                .foregroundColor(.orange)                                        }
+                                            .font(.system(size: geometry.size.height * 0.032))
+                                            .padding()
+                                            .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                            .foregroundColor(.black)
+                                            .textFieldStyle(.roundedBorder)
+                                            .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            
+                                        }
+                                    }
+                                    HStack{
+                                        NavigationLink(destination: BuyView()) {
                                             HStack {
                                                 
                                                 Text("Check for Yearbook Purchase")
@@ -88,27 +105,40 @@ struct ContentView: View {
                                     .padding()
                                 }
                                 .padding()
-                                VStack(alignment: .trailing) {
-                                    HStack {
-                                        Button {
+                            }
+                            .padding()
+                            VStack(alignment: .trailing) {
+                                HStack {
+                                    Button {
+                                        poppedOut.toggle()
+                                        if poppedOut == false {
+                                            buttonOrientation = "left"
+                                            x = 0
+                                            y = 0
+                                        }
+                                        if poppedOut == true {
+                                            buttonOrientation = "right"
                                             x = 400
                                             y = geometry.size.height * 1
-                                        } label: {
-                                            Text("\(Image(systemName: "arrowshape.left.fill"))")
-                                                .font(.system(size: 20))
-                                                .foregroundColor(.orange)
                                         }
-                                        VStack {
-                                            Text(instructions)
-                                                .padding()
-                                        }
-                                        .frame(width: x, height: y)
+                                        
+                                    } label: {
+                                        Text("\(Image(systemName: "arrowshape.\(buttonOrientation).fill"))")
+                                            .font(.system(size: 20))
+                                            .foregroundColor(.orange)
                                     }
+                                    VStack {
+                                        Text(instructions)
+                                            .padding()
+                                    }
+                                    .frame(width: x, height: y)
+                                    .background(.orange)
                                 }
                             }
                             Spacer()
                         }
                     }
+                    //                    Spacer()
                 }
             }
         }

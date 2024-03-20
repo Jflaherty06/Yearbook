@@ -27,13 +27,6 @@ struct BuyView: View {
                         .ignoresSafeArea()
                         .navigationBarTitleDisplayMode(.inline)
                 }
-                Text("To buy a yearbook, please follow the directions below!")
-                    .font(.system(size: 17))
-                    .foregroundStyle(.black)
-                Text("1. Log into your Infinite Campus with the D214 Staff or Student Sign In")
-                Text("2. Tap the three lines on the top right to open the sidebar and tap on 'Fees'.")
-                Text("3. In your shopping cart, add a yearbook.")
-                Text("If it shows zero dollars, that means you have no fees left to pay, indicating that you have already bought one.")
             }
         }
     }
