@@ -15,8 +15,9 @@ struct BuyView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack() {
+                Color.gray
+                    .ignoresSafeArea()
                 Text("Buy a Yearbook")
-                    .background(.gray)
                     .padding()
                     .font(.title)
                     .foregroundStyle(.black)
@@ -25,7 +26,8 @@ struct BuyView: View {
                 NavigationStack {
                     SafariWebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
                         .frame(width: geometry.size.width * 1, height: geometry.size.height * 0.75)
-                        .ignoresSafeArea()
+                 Color.gray
+                       .ignoresSafeArea()
                         .navigationBarTitleDisplayMode(.inline)
                 }
                 Text("To buy a yearbook, please follow the directions below!")

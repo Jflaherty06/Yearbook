@@ -44,7 +44,6 @@ struct CheckView: View {
                     .textFieldStyle(.roundedBorder)
                     .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.1)
                     .font(.system(size: 50))
-                    .background(.gray)
                     .padding()
                     .onSubmit {
                         let answer = checkID(studentID: StudentID)
