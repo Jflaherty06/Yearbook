@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     
     @State var x = 0.0
     @State var y = 0.0
     @State var  instructions = "The Hersey yearbook is a great thing\nIt has so many awesome pictures\nIt features many different sports and clubs"
+    @State var poppedOut = false
+    @State var buttonOrientation = "left"
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -24,43 +26,37 @@ struct ContentView: View {
                     //                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
                     //                        .ignoresSafeArea()
                     VStack{
-                        HStack{
-                            
+                        ZStack(alignment: .trailing) {
                             VStack {
-                                HStack{
-                                    Text("2024 Yearbook Wrapped")
-                                        .font(.system(size: 60))
-                                        .font(.title)
-                                        .foregroundStyle(.white)
-                                        .shadow(radius: 20)
-//                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
-                                        .fontWeight(.bold)
-                                        .padding()
-                                    
-                                    Spacer()
-                                }
+                                Text("2024 Yearbook Wrapped")
+                                    .font(.system(size: 60))
+                                    .font(.title)
+                                    .foregroundStyle(.white)
+                                    .shadow(radius: 20)
+                                //                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                    .fontWeight(.bold)
+                                    .padding()
                                 Image("hersey")
                                     .resizable()
                                     .frame(width: 120, height: 120)
                                     .scaledToFill()
                                 Group {
-                                    HStack{
-                                    NavigationLink(destination: CheckView()) {
-                                        HStack {
-                                            Text(Image(systemName: "play.circle"))
-                                                .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
-                                            Text("Check for Yearbook Purchase")
-                                            .foregroundColor(.orange)                                        }
-                                        .font(.system(size: geometry.size.height * 0.032))
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                        .foregroundColor(.black)
-                                        .textFieldStyle(.roundedBorder)
-                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                        
+                                    HStack {
+                                        NavigationLink(destination: CheckView()) {
+                                            HStack {
+                                                Text(Image(systemName: "play.circle"))
+                                                    .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
+                                                Text("Check for Yearbook Purchase")
+                                                .foregroundColor(.orange)                                        }
+                                            .font(.system(size: geometry.size.height * 0.032))
+                                            .padding()
+                                            .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                            .foregroundColor(.black)
+                                            .textFieldStyle(.roundedBorder)
+                                            .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            
+                                        }
                                     }
-                                        Spacer()
-                                }
                                     HStack{
                                         NavigationLink(destination: BuyView()) {
                                             HStack {
@@ -73,7 +69,6 @@ struct ContentView: View {
                                             .foregroundColor(.black)
                                             .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                         }
-                                        Spacer()
                                     }
                                     //                                    NavigationLink(destination: ChoosePhotoView()) {
                                     //                                        HStack {
@@ -93,10 +88,20 @@ struct ContentView: View {
                             VStack(alignment: .trailing) {
                                 HStack {
                                     Button {
-                                        x = 400
-                                        y = geometry.size.height * 1
+                                        poppedOut.toggle()
+                                        if poppedOut == false {
+                                            buttonOrientation = "left"
+                                            x = 0
+                                            y = 0
+                                        }
+                                        if poppedOut == true {
+                                            buttonOrientation = "right"
+                                            x = 400
+                                            y = geometry.size.height * 1
+                                        }
+                                        
                                     } label: {
-                                        Text("\(Image(systemName: "arrowshape.left.fill"))")
+                                        Text("\(Image(systemName: "arrowshape.\(buttonOrientation).fill"))")
                                             .font(.system(size: 20))
                                             .foregroundColor(.orange)
                                     }
@@ -105,11 +110,12 @@ struct ContentView: View {
                                             .padding()
                                     }
                                     .frame(width: x, height: y)
+                                    .background(.orange)
                                 }
                             }
                         }
-                        Spacer()
                     }
+                    //                    Spacer()
                 }
             }
         }

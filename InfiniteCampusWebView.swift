@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import WebKit
 
-struct SafariWebView: UIViewRepresentable {
+struct InfiniteCampusWebView: UIViewRepresentable {
     
     let url: URL
     

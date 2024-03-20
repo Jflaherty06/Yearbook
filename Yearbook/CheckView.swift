@@ -71,7 +71,7 @@ struct CheckView: View {
                     StudentID = ""
                 } label: {
                     HStack {
-                        Text(Image(systemName: "play.circle"))
+                       
                         Text("Check ID")
                     }
                     .font(.system(size: geometry.size.height * 0.02))
@@ -87,7 +87,7 @@ struct CheckView: View {
                 }
                 NavigationLink(destination: BuyView()) {
                     HStack {
-                        Text(Image(systemName: "play.circle"))
+                        
                         Text("Buy a Yearbook")
                     }
                     .font(.system(size: geometry.size.height * 0.02))
@@ -104,7 +104,7 @@ struct CheckView: View {
     
     
     
-    func checkID(studentID: String) -> Bool{
+    func checkID(studentID: String) -> Bool {
         for number in viewModel.idNumbers {
             if number == studentID {
                 return true
