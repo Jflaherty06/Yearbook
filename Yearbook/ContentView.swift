@@ -31,8 +31,9 @@ struct ContentView: View {
                                     Text("2024 Yearbook Wrapped")
                                         .font(.system(size: 60))
                                         .font(.title)
-                                        .foregroundStyle(.white)
+                                        .foregroundStyle(.orange)
                                         .shadow(radius: 20)
+                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                     //                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                         .fontWeight(.bold)
                                         .padding()
@@ -45,74 +46,74 @@ struct ContentView: View {
                                     .scaledToFill()
                                 Group {
                                     HStack{
-                                    NavigationLink(destination: CheckView()) {
-                                        HStack {
-                                        
-                                            Text("Check for Yearbook Purchase")
-                                            .foregroundColor(.orange)                                        }
-                                        .font(.system(size: geometry.size.height * 0.032))
-                                        .padding()
-                                        .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                        .foregroundColor(.black)
-                                        .textFieldStyle(.roundedBorder)
-                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                        
-                                    }
-                                    HStack{
-                                        NavigationLink(destination: BuyView()) {
+                                        NavigationLink(destination: CheckView()) {
                                             HStack {
-                                               
-                                                Text("Buy yearbook")
-                                            }
+                                                
+                                                Text("Check for Yearbook Purchase")
+                                                .foregroundColor(.orange)                                        }
                                             .font(.system(size: geometry.size.height * 0.032))
                                             .padding()
                                             .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
                                             .foregroundColor(.black)
+                                            .textFieldStyle(.roundedBorder)
                                             .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            
                                         }
-                                        Spacer()
+                                        HStack{
+                                            NavigationLink(destination: BuyView()) {
+                                                HStack {
+                                                    
+                                                    Text("Buy yearbook")
+                                                }
+                                                .font(.system(size: geometry.size.height * 0.032))
+                                                .padding()
+                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                                .foregroundColor(.black)
+                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            }
+                                            Spacer()
+                                        }
+                                        //                                    NavigationLink(destination: ChoosePhotoView()) {
+                                        //                                        HStack {
+                                        //                                            Text(Image(systemName: "play.circle"))
+                                        //                                            Text("Choose Yearbook Photo")
+                                        //                                        }
+                                        //                                        .font(.system(size: geometry.size.height * 0.02))
+                                        //                                        .padding()
+                                        //                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                        //                                        .foregroundColor(.black)
+                                        //                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                        //                                    }
                                     }
-                                    //                                    NavigationLink(destination: ChoosePhotoView()) {
-                                    //                                        HStack {
-                                    //                                            Text(Image(systemName: "play.circle"))
-                                    //                                            Text("Choose Yearbook Photo")
-                                    //                                        }
-                                    //                                        .font(.system(size: geometry.size.height * 0.02))
-                                    //                                        .padding()
-                                    //                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                    //                                        .foregroundColor(.black)
-                                    //                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                    //                                    }
+                                    .padding()
                                 }
                                 .padding()
-                            }
-                            .padding()
-                            VStack(alignment: .trailing) {
-                                HStack {
-                                    Button {
-                                        x = 400
-                                        y = geometry.size.height * 1
-                                    } label: {
-                                        Text("\(Image(systemName: "arrowshape.left.fill"))")
-                                            .font(.system(size: 20))
-                                            .foregroundColor(.orange)
+                                VStack(alignment: .trailing) {
+                                    HStack {
+                                        Button {
+                                            x = 400
+                                            y = geometry.size.height * 1
+                                        } label: {
+                                            Text("\(Image(systemName: "arrowshape.left.fill"))")
+                                                .font(.system(size: 20))
+                                                .foregroundColor(.orange)
+                                        }
+                                        VStack {
+                                            Text(instructions)
+                                                .padding()
+                                        }
+                                        .frame(width: x, height: y)
                                     }
-                                    VStack {
-                                        Text(instructions)
-                                            .padding()
-                                    }
-                                    .frame(width: x, height: y)
                                 }
                             }
+                            Spacer()
                         }
-                        Spacer()
                     }
                 }
             }
         }
     }
 }
-
 #Preview {
     ContentView()
 }

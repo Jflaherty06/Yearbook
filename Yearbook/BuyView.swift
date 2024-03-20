@@ -16,10 +16,9 @@ struct BuyView: View {
         GeometryReader { geometry in
             VStack() {
                 Text("Buy a Yearbook")
-                    .background(.gray)
-                    .padding()
+                    .font(.system(size: 60))
                     .font(.title)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.orange)
                     .shadow(radius: 20)
                     .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                 NavigationStack {

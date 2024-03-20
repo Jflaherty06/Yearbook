@@ -10,7 +10,14 @@ import SwiftUI
 
 struct ChoosePhotoView: View {
     var body: some View {
-        Text("Placeholder")
+        GeometryReader { geometry in
+            Text("Placeholder")
+                .font(.system(size: 60))
+                .font(.title)
+                .foregroundStyle(.orange)
+                .shadow(radius: 20)
+                .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+        }
     }
 }
 #Preview {
