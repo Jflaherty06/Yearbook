@@ -25,7 +25,7 @@ struct BuyView: View {
                     .shadow(radius: 20)
                     .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                 NavigationStack {
-                    SafariWebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
+                    InfiniteCampusWebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
                         .frame(width: geometry.size.width * 1, height: geometry.size.height * 0.75)
                  Color.gray
                        .ignoresSafeArea()
