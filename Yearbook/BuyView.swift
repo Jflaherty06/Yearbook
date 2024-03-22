@@ -23,15 +23,13 @@ struct BuyView: View {
                 Text("Once you've paid, your fees will show the 50 dollar amount. This does not mean you have to pay again.")
                     .padding()
                     .font(.subheadline)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.white)
                     .shadow(radius: 20)
                     .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                 NavigationStack {
                     InfiniteCampusWebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
                         .frame(width: geometry.size.width * 1, height: geometry.size.height * 0.75)
-                 Color.gray
-                       .ignoresSafeArea()
-                        .navigationBarTitleDisplayMode(.inline)
+                 
                 }
             }
         }
