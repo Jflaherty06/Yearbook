@@ -26,9 +26,18 @@ struct CheckView: View {
                        Color.gray
                            .ignoresSafeArea()
                        Text("Check for Yearbook")
-                       //                       .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.2, alignment: .center)
+                           .font(.system(size: 60))
+                           .font(.title)
+                           .foregroundStyle(.orange)
+                           .shadow(radius: 20)
+                           .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                       
                        Text("Purchase")
-                       //                       .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1, alignment: .center)
+                           .font(.system(size: 60))
+                           .font(.title)
+                           .foregroundStyle(.orange)
+                           .shadow(radius: 20)
+                           .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                    }
                 }
               
@@ -44,7 +53,6 @@ struct CheckView: View {
                     .textFieldStyle(.roundedBorder)
                     .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.1)
                     .font(.system(size: 50))
-                    .background(.gray)
                     .padding()
                     .onSubmit {
                         let answer = checkID(studentID: StudentID)
