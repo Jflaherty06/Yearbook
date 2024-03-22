@@ -17,8 +17,9 @@ struct ChoosePhotoView: View {
                 .foregroundStyle(.orange)
                 .shadow(radius: 20)
                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
-        NavigationStack{
-            VipPhotosWebView(url: URL(string: "https://www.vipis.com/group/9bb336c8/john-hersey-high-school")!)
+            NavigationStack{
+                VipPhotosWebView(url: URL(string: "https://www.vipis.com/group/9bb336c8/john-hersey-high-school")!)
+            }
         }
     }
 }
