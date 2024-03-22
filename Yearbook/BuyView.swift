@@ -18,6 +18,7 @@ struct BuyView: View {
                 Color.gray
                     .ignoresSafeArea()
                 Text("Buy a Yearbook")
+                Text("To buy a yearbook, click on the link to get to Infinite Campus. Then, go to your fees and add a Yearbook to it ($50). Once you've paid, your fees will show the 50 dollar amount. This does not mean you have to pay again.")
                     .padding()
                     .font(.title)
                     .foregroundStyle(.black)
