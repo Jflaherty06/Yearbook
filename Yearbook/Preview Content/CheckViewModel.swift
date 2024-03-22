@@ -27,7 +27,7 @@ class CheckViewModel: ObservableObject {
             for idNumber in myDataSnapshot?.children.allObjects as! [DataSnapshot] {
                 let number = idNumber.key
                 let dictionary = idNumber.value as! [String:Any]
-                let currentIdNumber = dictionary["ID Number"]
+                //                let currentIdNumber = dictionary["ID Number"]
                 newList.append(number)
             }
             self.idNumbers = newList
