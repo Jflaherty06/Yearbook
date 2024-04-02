@@ -19,10 +19,7 @@ struct ContentView: View {
                         ZStack {
                             Color.gray
                                 .ignoresSafeArea()
-                            //                    Image("2024coverdesign")
-                            //                        .resizable()
-                            //                        .frame(width: geometry.size.width * 1.1, height: geometry.size.height * 1.7)
-                            //                        .ignoresSafeArea()
+                          
                             VStack{
                                 ZStack(alignment: .trailing) {
                                     VStack {
@@ -31,7 +28,7 @@ struct ContentView: View {
                                             .font(.title)
                                             .foregroundStyle(.white)
                                             .shadow(radius: 20)
-                                        //                                        .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                        //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                             .fontWeight(.bold)
                                             .padding()
                                         Image("hersey")
@@ -83,52 +80,24 @@ struct ContentView: View {
                                                     
                                                 }
                                             }
-                                            //                                    NavigationLink(destination: ChoosePhotoView()) {
-                                            //                                        HStack {
-                                            //                                            Text(Image(systemName: "play.circle"))
-                                            //                                            Text("Choose Yearbook Photo")
-                                            //                                        }
-                                            //                                        .font(.system(size: geometry.size.height * 0.02))
-                                            //                                        .padding()
-                                            //                                        .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                            //                                        .foregroundColor(.black)
-                                            //                                        .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                            //                                    }
+                                            NavigationLink(destination: ChoosePhotoView()) {
+                                                HStack {
+                                                    Text(Image(systemName: "play.circle"))
+                                                    Text("Choose Yearbook Photo")
+                                                }
+                                                .font(.system(size: geometry.size.height * 0.02))
+                                                .padding()
+                                                .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
+                                                .foregroundColor(.black)
+                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                            }
                                         }
                                         .padding()
                                     }
                                     .padding()
-                                    //                            VStack(alignment: .trailing) {
-                                    //                                HStack {
-                                    //                                    Button {
-                                    //                                        poppedOut.toggle()
-                                    //                                        if poppedOut == false {
-                                    //                                            buttonOrientation = "left"
-                                    //                                            x = 0
-                                    //                                            y = 0
-                                    //                                        }
-                                    //                                        if poppedOut == true {
-                                    //                                            buttonOrientation = "right"
-                                    //                                            x = 400
-                                    //                                            y = geometry.size.height * 1
-                                    //                                        }
-                                    //
-                                    //                                    } label: {
-                                    //                                        Text("\(Image(systemName: "arrowshape.\(buttonOrientation).fill"))")
-                                    //                                            .font(.system(size: 20))
-                                    //                                            .foregroundColor(.orange)
-                                    //                                    }
-                                    //                                    VStack {
-                                    //                                        Text(instructions)
-                                    //                                            .padding()
-                                    //                                    }
-                                    //                                    .frame(width: x, height: y)
-                                    //                                    .background(.orange)
-                                    //                                }
-                                    //                            }
                                 }
                             }
-                            //                    Spacer()
+                            
                         }
                     }
                 }
