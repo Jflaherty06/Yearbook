@@ -32,6 +32,7 @@ struct BuyView: View {
                  
                 }
             }
+            .background(.gray)
         }
     }
 }
