@@ -22,6 +22,7 @@ struct BuyView: View {
                 Text("Then, go to your fees and add a Yearbook to it ($50).")
                 Text("Once you've paid, your fees will show the 50 dollar amount. This does not mean you have to pay again.")
                     .padding()
+                    .border(.orange, width: 6)
                     .font(.subheadline)
                     .foregroundStyle(.white)
                     .shadow(radius: 20)
