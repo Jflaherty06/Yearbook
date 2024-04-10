@@ -72,9 +72,9 @@ struct CheckView: View {
                 Button {
                     let answer = checkID(studentID: StudentID)
                     if answer == true {
-                        text = "You have not purchased a yearbook"
-                    } else if answer == false {
                         text = "You have purchased a yearbook, thank you!"
+                    } else if answer == false {
+                        text = "You have not purchased a yearbook"
                     }
                     showingAlert =  true
                     StudentID = ""
@@ -115,7 +115,7 @@ struct CheckView: View {
     
     func checkID(studentID: String) -> Bool {
         for number in viewModel.idNumbers {
-            if number == studentID {
+            if String(number) == studentID {
                 return true
             }
         }
