@@ -5,6 +5,7 @@ import SwiftUI
 struct CheckView: View {
     
     @ObservedObject var viewModel = CheckViewModel()
+    @State var array = [626130,625106]
     @State var StudentID = ""
     @State var purchased:Bool = true
     @State var text = ""
@@ -102,7 +103,7 @@ struct CheckView: View {
     }
         
         func checkID(studentID: String) -> Bool {
-            for number in viewModel.idNumbers {
+            for number in array {
                 if String(number) == studentID {
                     return true
                 }
