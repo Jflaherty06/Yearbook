@@ -1,127 +1,114 @@
-//
-//  CheckView.swift
-//  Yearbook
-//
-//  Created by Thomas Niezyniecki on 1/19/24.
-//
-
 import Foundation
 import SwiftUI
 
+
 struct CheckView: View {
     
-    @ObservedObject var viewModel  = CheckViewModel()
+    @ObservedObject var viewModel = CheckViewModel()
+    @State var array = [626130,625106]
     @State var StudentID = ""
     @State var purchased:Bool = true
     @State var text = ""
     @State var showingAlert = false
-    
     var body: some View {
+        
         GeometryReader { geometry in
-            VStack {
+            
+            ZStack{
                 Color.gray
                     .ignoresSafeArea()
-               Group {
-                   VStack(spacing: 5) {
-                       Color.gray
-                           .ignoresSafeArea()
-                       Text("Check for Yearbook")
-                           .font(.system(size: 60))
-                           .font(.title)
-                           .foregroundStyle(.orange)
-                           .shadow(radius: 20)
-                           .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
-                       
-                       Text("Purchase")
-                           .font(.system(size: 60))
-                           .font(.title)
-                           .foregroundStyle(.orange)
-                           .shadow(radius: 20)
-                           .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
-                   }
-                }
-              
-//                .font(.system(size: 60))
-                .padding()
-                .font(.custom(
-                "Arial", fixedSize: 60))
-                .foregroundStyle(.orange)
-                .shadow(radius: 20)
-                .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.2, alignment: .center)
-                .padding()
-                TextField("Enter Student ID", text: $StudentID)
-                    .textFieldStyle(.roundedBorder)
-                    .frame(width: geometry.size.width * 0.5, height: geometry.size.height * 0.1)
-                    .font(.system(size: 50))
-                    .padding()
-                    .onSubmit {
-                        let answer = checkID(studentID: StudentID)
-                        if answer == true {
-                            text = "You have not purchased a yearbook"
-                        } else if answer == false {
-                            text = "You have purchased a yearbook, thank you!"
-                        }
-                        showingAlert =  true
-                    }
-                    .alert("\(text)", isPresented: $showingAlert) {
-                        Button("Ok", role: .cancel) { }
-                        NavigationLink(destination: BuyView()) {
-                            Text("Buy a Yearbook")
+                
+                VStack {
+                    Group {
+                        VStack() {
+                            Text("Check for Yearbook")
+                            Text("Purchase")
                         }
                     }
-                Button {
-                    let answer = checkID(studentID: StudentID)
-                    if answer == true {
-                        text = "You have not purchased a yearbook"
-                    } else if answer == false {
-                        text = "You have purchased a yearbook, thank you!"
-                    }
-                    showingAlert =  true
-                    StudentID = ""
-                } label: {
-                    HStack {
-                       
-                        Text("Check ID")
-                    }
-                    .font(.system(size: geometry.size.height * 0.02))
                     .padding()
-                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                    .background(Color.orange)
-                    .foregroundColor(.black)
-                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.orange))
-                }
-                .alert("\(text)", isPresented: $showingAlert) {
-                    Button("Ok", role: .cancel) { StudentID = "" }
-                    NavigationLink(destination: BuyView()) { Text("Buy a Yearbook") }
-                }
-                NavigationLink(destination: BuyView()) {
-                    HStack {
-                        
-                        Text("Buy a Yearbook")
+                    .fontWeight(.bold)
+                    .font(.custom(
+                        "Arial", fixedSize: 35))
+                    .foregroundStyle(.white)
+                    .frame(width: geometry.size.width * 0.95, height: geometry.size.height * 0.2, alignment: .center)
+                    
+                    
+                    TextField("Enter Student ID", text: $StudentID)
+                        .textFieldStyle(.roundedBorder)
+                        .frame(width: geometry.size.width * 0.875, height: geometry.size.height * 0.1)
+                        .padding()
+                        .onSubmit {
+                            let answer = checkID(studentID: StudentID)
+                            if answer == true {
+                                text = "You have purchased a yearbook, thank you!"
+                            } else if answer == false {
+                                text = "You have not purchased a yearbook"
+                            }
+                            showingAlert =  true
+                        }
+                    //                        .alert("\(text)", isPresented: $showingAlert) {
+                    //                            Button("Ok", role: .cancel) { }
+                    //                            NavigationLink(destination: BuyView()
+                    //                            )
+                    //                            {
+                    //                                Text("Buy a Yearbook")
+                    //                            }
+                    //                        }
+                    
+                    
+                    VStack{
+                        HStack{
+                            Button {
+                                let answer = checkID(studentID: StudentID)
+                                if answer == true {
+                                    text = "You have purchased a yearbook, thank you!"
+                                } else if answer == false {
+                                    text = "You have not purchased a yearbook"
+                                }
+                                showingAlert =  true
+                                StudentID = ""
+                                
+                            } label: {
+                                Text("Check ID")
+                                    .padding()
+                                    .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
+                                    .font(.system(size: geometry.size.height * 0.032))
+                                    .background(Color.orange)
+                                    .foregroundColor(.black)
+                                    .cornerRadius(10)
+                            }
+                        }
+                        //                        .alert("\(text)", isPresented: $showingAlert) {
+                        //                            Button("Ok", role: .cancel) { StudentID = "" }
+                        //                            NavigationLink(destination: BuyView()) { Text("Buy a Yearbook") }
+                        //                            NavigationLink(destination: BuyView()) {
+                        //                            }
+                        HStack {
+                            NavigationLink(destination: BuyView()) {
+                                HStack {
+                                    Text("Buy yearbook")
+                                }
+                                .padding()
+                                .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
+                                .font(.system(size: geometry.size.height * 0.032))
+                                .background(Color.orange)
+                                .foregroundColor(.black)
+                                .cornerRadius(10)
+                            }
+                        }
                     }
-                    .font(.system(size: geometry.size.height * 0.02))
-                    .padding()
-                    .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                    .background(Color.orange)
-                    .foregroundColor(.black)
-                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.orange))
                 }
             }
         }
     }
-    
-    
-    
-    
-    func checkID(studentID: String) -> Bool {
-        for number in viewModel.idNumbers {
-            if number == studentID {
-                return true
+        
+        func checkID(studentID: String) -> Bool {
+            for number in array {
+                if String(number) == studentID {
+                    return true
+                }
             }
+            return false
         }
-        return false
     }
-}
-
-
 

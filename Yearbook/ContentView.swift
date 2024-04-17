@@ -31,22 +31,25 @@ struct ContentView: View {
                                         //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                             .fontWeight(.bold)
                                             .padding()
+                                        
+                                        
                                         Image("hersey")
                                             .resizable()
                                             .frame(width: 120, height: 120)
                                             .scaledToFill()
+                                        
+                                        
                                         Group {
                                             HStack {
                                                 NavigationLink(destination: CheckView()) {
                                                     HStack {
-                                                        Text(Image(systemName: "play.circle"))
-                                                            .foregroundColor(Color(red: 255/255, green: 165/255, blue: 0/255))
                                                         Text("Check for Yearbook Purchase")
                                                         .foregroundColor(.orange)                                        }
                                                     .font(.system(size: geometry.size.height * 0.032))
+                                                    .fontWeight(.bold)
                                                     .padding()
                                                     .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.black)
+                                                    .foregroundColor(.white)
                                                     .textFieldStyle(.roundedBorder)
                                                     .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                                     
@@ -55,40 +58,40 @@ struct ContentView: View {
                                             HStack{
                                                 NavigationLink(destination: BuyView()) {
                                                     HStack {
-                                                        Text(Image(systemName: "play.circle"))
                                                         Text("Buy yearbook")
                                                     }
                                                     .font(.system(size: geometry.size.height * 0.032))
+                                                    .fontWeight(.bold)
                                                     .padding()
                                                     .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.black)
+                                                    .foregroundColor(.orange)
                                                     .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                                 }
                                             }
-                                            HStack{
-                                                NavigationLink(destination: BuyView()) {
-                                                    HStack {
-                                                        
-                                                        Text("Check for Yearbook Purchase")
-                                                        .foregroundColor(.orange)                                        }
-                                                    .font(.system(size: geometry.size.height * 0.032))
-                                                    .padding()
-                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.black)
-                                                    .textFieldStyle(.roundedBorder)
-                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                                    
-                                                }
-                                            }
+//                                            HStack{
+//                                                NavigationLink(destination: BuyView()) {
+//                                                    HStack {
+//                                                        
+//                                                        Text("Check for Yearbook Purchase")
+//                                                        .foregroundColor(.orange)                                        }
+//                                                    .font(.system(size: geometry.size.height * 0.032))
+//                                                    .padding()
+//                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+//                                                    .foregroundColor(.black)
+//                                                    .textFieldStyle(.roundedBorder)
+//                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+//                                                    
+//                                                }
+//                                            }
                                             NavigationLink(destination: ChoosePhotoView()) {
                                                 HStack {
-                                                    Text(Image(systemName: "play.circle"))
                                                     Text("Choose Yearbook Photo")
                                                 }
-                                                .font(.system(size: geometry.size.height * 0.02))
+                                                .font(.system(size: geometry.size.height * 0.032))
+                                                .fontWeight(.bold)
                                                 .padding()
-                                                .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                                .foregroundColor(.black)
+                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                                .foregroundColor(.orange)
                                                 .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                             }
                                         }

@@ -17,12 +17,12 @@
 		E10783552B87AF1A0051DF7E /* InfiniteCampusWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */; };
 		E11F78422B5ADA7500B4B83B /* ChoosePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */; };
 		E133C7332BAB3E41007E7DA8 /* VipPhotosWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */; };
-		E136804A2B6D4FA4002E8EA5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E13680492B6D4FA4002E8EA5 /* GoogleService-Info.plist */; };
 		E136804D2B6D5094002E8EA5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E136804C2B6D5094002E8EA5 /* FirebaseAnalytics */; };
 		E136804F2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E136804E2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion */; };
 		E13680512B6D5094002E8EA5 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E13680502B6D5094002E8EA5 /* FirebaseAnalyticsSwift */; };
 		E13680532B6D5094002E8EA5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E13680522B6D5094002E8EA5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		E13680552B6D5094002E8EA5 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = E13680542B6D5094002E8EA5 /* FirebaseAppCheck */; };
+		E1C60EDA2BD02A1E00D92489 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1C60ED92BD02A1E00D92489 /* GoogleService-Info.plist */; };
 		E1D4693D2B729FB3001F08CB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E1D4693C2B729FB3001F08CB /* FirebaseDatabase */; };
 		E1D4693F2B729FB9001F08CB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1D4693E2B729FB9001F08CB /* FirebaseDatabaseSwift */; };
 		E1D469412B72A122001F08CB /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D469402B72A122001F08CB /* StudentModel.swift */; };
@@ -40,7 +40,7 @@
 		E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCampusWebView.swift; sourceTree = "<group>"; };
 		E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoView.swift; sourceTree = "<group>"; };
 		E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipPhotosWebView.swift; sourceTree = "<group>"; };
-		E13680492B6D4FA4002E8EA5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1C60ED92BD02A1E00D92489 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D469402B72A122001F08CB /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,7 @@
 				E1D469402B72A122001F08CB /* StudentModel.swift */,
 				E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */,
 				AABA35742B2235530030966B /* Assets.xcassets */,
-				E13680492B6D4FA4002E8EA5 /* GoogleService-Info.plist */,
+				E1C60ED92BD02A1E00D92489 /* GoogleService-Info.plist */,
 				AABA35762B2235530030966B /* Preview Content */,
 			);
 			path = Yearbook;
@@ -185,7 +185,7 @@
 			files = (
 				AABA35782B2235530030966B /* Preview Assets.xcassets in Resources */,
 				AABA35752B2235530030966B /* Assets.xcassets in Resources */,
-				E136804A2B6D4FA4002E8EA5 /* GoogleService-Info.plist in Resources */,
+				E1C60EDA2BD02A1E00D92489 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yearbook/Preview Content\"";
-				DEVELOPMENT_TEAM = K6KD9JPKR2;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -346,12 +346,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.625106.Yearbook;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Yearbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -367,7 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yearbook/Preview Content\"";
-				DEVELOPMENT_TEAM = K6KD9JPKR2;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -375,12 +376,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.625106.Yearbook;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Yearbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
