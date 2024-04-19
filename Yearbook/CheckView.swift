@@ -23,6 +23,7 @@ struct CheckView: View {
                         VStack() {
                             Text("Check for Yearbook")
                             Text("Purchase")
+                            
                         }
                     }
                     .padding()
@@ -42,7 +43,7 @@ struct CheckView: View {
                             if answer == true {
                                 text = "You have purchased a yearbook, thank you!"
                             } else if answer == false {
-                                text = "You have not purchased a yearbook"
+                                text = "You have not purchased a yearbook."
                             }
                             showingAlert =  true
                         }
