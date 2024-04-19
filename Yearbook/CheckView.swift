@@ -22,6 +22,7 @@ struct CheckView: View {
                         VStack() {
                             Text("Check for Yearbook")
                             Text("Purchase")
+                            
                         }
                     }
                     .padding()

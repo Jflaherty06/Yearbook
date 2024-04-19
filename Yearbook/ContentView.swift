@@ -28,6 +28,7 @@ struct ContentView: View {
                                             .font(.title)
                                             .foregroundStyle(.white)
                                             .shadow(radius: 20)
+                                            .offset(y:-50)
                                         //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                             .fontWeight(.bold)
                                             .padding()
@@ -35,6 +36,7 @@ struct ContentView: View {
                                             .resizable()
                                             .frame(width: 120, height: 120)
                                             .scaledToFill()
+                                            
                                         Group {
                                             HStack {
                                                 NavigationLink(destination: CheckView()) {
