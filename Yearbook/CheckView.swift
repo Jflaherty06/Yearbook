@@ -46,6 +46,7 @@ struct CheckView: View {
                             }
                             showingAlert =  true
                         }
+                    Text(text)
                     //                        .alert("\(text)", isPresented: $showingAlert) {
                     //                            Button("Ok", role: .cancel) { }
                     //                            NavigationLink(destination: BuyView()
@@ -103,8 +104,8 @@ struct CheckView: View {
     }
         
         func checkID(studentID: String) -> Bool {
-            for number in array {
-                if String(number) == studentID {
+            for number in viewModel.idNumbers {
+                if number == studentID {
                     return true
                 }
             }

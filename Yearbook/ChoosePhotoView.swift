@@ -26,8 +26,12 @@ struct ChoosePhotoView: View {
                     .foregroundStyle(.white)
                     .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                 NavigationStack {
-                    InfiniteCampusWebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
-                        .frame(width: geometry.size.width * 0.85, height: geometry.size.height * 0.65)
+                    let url = URL(string: "https://www.vipis.com/group/9bb336c8/john-hersey-high-school") ?? URL(string: "https://www.apple.com")
+                    VipPhotosWebView(url: url!)
+                        .frame(width: geometry.size.width * 0.85, height: geometry.size.height * 0.75)
+
+//                    InfiniteCampusWebView(url: URL(string: "https://www.vipis.com/group/9bb336c8/john-hersey-high-school")!)
+                        
                     
                 }
             }
