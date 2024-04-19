@@ -32,6 +32,8 @@ struct ContentView: View {
                                         //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                             .fontWeight(.bold)
                                             .padding()
+                                        
+                                        
                                         Image("hersey")
                                             .resizable()
                                             .frame(width: 120, height: 120)
@@ -41,7 +43,6 @@ struct ContentView: View {
                                             HStack {
                                                 NavigationLink(destination: CheckView()) {
                                                     HStack {
-                                                       
                                                         Text("Check for Yearbook Purchase")
                                                         .foregroundColor(.orange)                                        }
                                                     .font(.system(size: geometry.size.height * 0.032))
@@ -56,13 +57,13 @@ struct ContentView: View {
                                             HStack{
                                                 NavigationLink(destination: BuyView()) {
                                                     HStack {
-                                                        
                                                         Text("Buy yearbook")
                                                     }
                                                     .font(.system(size: geometry.size.height * 0.032))
+                                                    .fontWeight(.bold)
                                                     .padding()
                                                     .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.white)
+                                                    .foregroundColor(.orange)
                                                     .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                                 }
                                             }
@@ -83,13 +84,13 @@ struct ContentView: View {
 //                                            }
                                             NavigationLink(destination: ChoosePhotoView()) {
                                                 HStack {
-                                                   
                                                     Text("Choose Yearbook Photo")
                                                 }
-                                                .font(.system(size: geometry.size.height * 0.02))
+                                                .font(.system(size: geometry.size.height * 0.032))
+                                                .fontWeight(.bold)
                                                 .padding()
-                                                .frame(width: geometry.size.width * 0.3, height: geometry.size.height * 0.1)
-                                                .foregroundColor(.white)
+                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                                .foregroundColor(.orange)
                                                 .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                             }
                                         }

@@ -5,6 +5,7 @@ import SwiftUI
 struct CheckView: View {
     
     @ObservedObject var viewModel = CheckViewModel()
+    @State var array = [626130,625106]
     @State var StudentID = ""
     @State var purchased:Bool = true
     @State var text = ""
@@ -31,7 +32,7 @@ struct CheckView: View {
                         "Arial", fixedSize: 35))
                     .foregroundStyle(.white)
                     .frame(width: geometry.size.width * 0.95, height: geometry.size.height * 0.2, alignment: .center)
-                   
+                    
                     
                     TextField("Enter Student ID", text: $StudentID)
                         .textFieldStyle(.roundedBorder)
@@ -46,15 +47,14 @@ struct CheckView: View {
                             }
                             showingAlert =  true
                         }
-                    
-                        .alert("\(text)", isPresented: $showingAlert) {
-                            Button("Ok", role: .cancel) { }
-                            NavigationLink(destination: BuyView()
-                            )
-                            {
-                                Text("Buy a Yearbook")
-                            }
-                        }
+                    //                        .alert("\(text)", isPresented: $showingAlert) {
+                    //                            Button("Ok", role: .cancel) { }
+                    //                            NavigationLink(destination: BuyView()
+                    //                            )
+                    //                            {
+                    //                                Text("Buy a Yearbook")
+                    //                            }
+                    //                        }
                     
                     
                     VStack{
@@ -79,13 +79,15 @@ struct CheckView: View {
                                     .cornerRadius(10)
                             }
                         }
-                        .alert("\(text)", isPresented: $showingAlert) {
-                            Button("Ok", role: .cancel) { StudentID = "" }
-                            NavigationLink(destination: BuyView()) { Text("Buy a Yearbook") }
+                        //                        .alert("\(text)", isPresented: $showingAlert) {
+                        //                            Button("Ok", role: .cancel) { StudentID = "" }
+                        //                            NavigationLink(destination: BuyView()) { Text("Buy a Yearbook") }
+                        //                            NavigationLink(destination: BuyView()) {
+                        //                            }
+                        HStack {
                             NavigationLink(destination: BuyView()) {
-                                
                                 HStack {
-                                    Text("Buy a Yearbook")
+                                    Text("Buy yearbook")
                                 }
                                 .padding()
                                 .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
@@ -93,7 +95,6 @@ struct CheckView: View {
                                 .background(Color.orange)
                                 .foregroundColor(.black)
                                 .cornerRadius(10)
-                                
                             }
                         }
                     }
@@ -101,13 +102,14 @@ struct CheckView: View {
             }
         }
     }
-    
-    func checkID(studentID: String) -> Bool {
-        for number in viewModel.idNumbers {
-            if String(number) == studentID {
-                return true
+        
+        func checkID(studentID: String) -> Bool {
+            for number in array {
+                if String(number) == studentID {
+                    return true
+                }
             }
+            return false
         }
-        return false
     }
-}
+

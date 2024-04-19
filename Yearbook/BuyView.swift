@@ -14,12 +14,16 @@ struct BuyView: View {
     @State private var isPresentWebView = false
     var body: some View {
         GeometryReader { geometry in
+            ZStack{
+                Color.gray
+                    .ignoresSafeArea()
             VStack() {
-                
                 Text("Buy a Yearbook")
                     .font(.system(size: 40))
                 Text(" 1.To buy a yearbook, click on the link to get to Infinite Campus.")
+                    .foregroundStyle(.white)
                 Text("2. Then, go to your fees and add a Yearbook to it ($50).")
+                    .foregroundStyle(.white)
                 Text("Once you've paid, your fees will show the 50 dollar amount. This does not mean you have to pay again.")
                     .padding()
                     .border(.orange, width: 6)
@@ -28,12 +32,13 @@ struct BuyView: View {
                     .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                 NavigationStack {
                     InfiniteCampusWebView(url: URL(string: "https://d214il.infinitecampus.org/campus/portal/students/township_214.jsp?status=logoff")!)
-                        .frame(width: geometry.size.width * 1, height: geometry.size.height * 0.75)
-                 
+                        .frame(width: geometry.size.width * 0.85, height: geometry.size.height * 0.65)
+                    
                 }
             }
             .background(.gray)
         }
+    }
     }
 }
 
