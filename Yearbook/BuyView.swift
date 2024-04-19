@@ -33,13 +33,11 @@ struct BuyView: View {
                         .frame(width: geometry.size.width * 0.85, height: geometry.size.height * 0.65)
                     
                 }
+                .background(.gray)
             }
-            .background(.gray)
         }
     }
-    }
 }
-
 
 
 #Preview {

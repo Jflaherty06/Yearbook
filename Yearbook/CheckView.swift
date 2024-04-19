@@ -5,6 +5,7 @@ import SwiftUI
 struct CheckView: View {
     
     @ObservedObject var viewModel = CheckViewModel()
+    @State var array = [626130,625106]
     @State var StudentID = ""
     @State var purchased:Bool = true
     @State var text = ""
@@ -22,6 +23,7 @@ struct CheckView: View {
                         VStack() {
                             Text("Check for Yearbook")
                             Text("Purchase")
+                            
                         }
                     }
                     .padding()
@@ -40,10 +42,11 @@ struct CheckView: View {
                             if answer == true {
                                 text = "You have purchased a yearbook, thank you!"
                             } else if answer == false {
-                                text = "You have not purchased a yearbook"
+                                text = "You have not purchased a yearbook."
                             }
                             showingAlert =  true
                         }
+                    Text(text)
                     //                        .alert("\(text)", isPresented: $showingAlert) {
                     //                            Button("Ok", role: .cancel) { }
                     //                            NavigationLink(destination: BuyView()
@@ -104,7 +107,7 @@ struct CheckView: View {
         
         func checkID(studentID: String) -> Bool {
             for number in viewModel.idNumbers {
-                if String(number) == studentID {
+                if number == studentID {
                     return true
                 }
             }
