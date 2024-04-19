@@ -19,7 +19,7 @@ struct ContentView: View {
                         ZStack {
                             Color.gray
                                 .ignoresSafeArea()
-                          
+                            
                             VStack{
                                 ZStack(alignment: .trailing) {
                                     VStack {
@@ -44,7 +44,8 @@ struct ContentView: View {
                                                 NavigationLink(destination: CheckView()) {
                                                     HStack {
                                                         Text("Check for Yearbook Purchase")
-                                                        .foregroundColor(.orange)                                        }
+                                                            .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+                                                    }
                                                     .font(.system(size: geometry.size.height * 0.032))
                                                     .fontWeight(.bold)
                                                     .padding()
@@ -64,25 +65,10 @@ struct ContentView: View {
                                                     .fontWeight(.bold)
                                                     .padding()
                                                     .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.orange)
+                                                    .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
                                                     .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                                 }
                                             }
-//                                            HStack{
-//                                                NavigationLink(destination: BuyView()) {
-//                                                    HStack {
-//                                                        
-//                                                        Text("Check for Yearbook Purchase")
-//                                                        .foregroundColor(.orange)                                        }
-//                                                    .font(.system(size: geometry.size.height * 0.032))
-//                                                    .padding()
-//                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-//                                                    .foregroundColor(.black)
-//                                                    .textFieldStyle(.roundedBorder)
-//                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-//                                                    
-//                                                }
-//                                            }
                                             NavigationLink(destination: ChoosePhotoView()) {
                                                 HStack {
                                                     Text("Choose Yearbook Photo")
@@ -91,7 +77,7 @@ struct ContentView: View {
                                                 .fontWeight(.bold)
                                                 .padding()
                                                 .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                .foregroundColor(.orange)
+                                                .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
                                                 .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                             }
                                         }

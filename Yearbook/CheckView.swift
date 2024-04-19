@@ -26,8 +26,7 @@ struct CheckView: View {
                     }
                     .padding()
                     .fontWeight(.bold)
-                    .font(.custom(
-                        "Arial", fixedSize: 35))
+                    .font(.custom("Arial", fixedSize: 35))
                     .foregroundStyle(.white)
                     .frame(width: geometry.size.width * 0.95, height: geometry.size.height * 0.2, alignment: .center)
                     
@@ -72,8 +71,9 @@ struct CheckView: View {
                                     .padding()
                                     .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
                                     .font(.system(size: geometry.size.height * 0.032))
-                                    .background(Color.orange)
-                                    .foregroundColor(.black)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+                                    .background(.white)
                                     .cornerRadius(10)
                             }
                         }
@@ -90,8 +90,9 @@ struct CheckView: View {
                                 .padding()
                                 .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
                                 .font(.system(size: geometry.size.height * 0.032))
-                                .background(Color.orange)
-                                .foregroundColor(.black)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+                                .background(.white)
                                 .cornerRadius(10)
                             }
                         }
