@@ -15,7 +15,7 @@ struct ChoosePhotoView: View {
                 Color.gray
                     .ignoresSafeArea()
             VStack() {
-                Text("Choose a Yearbook")
+                Text("Choose a Yearbook Photo")
                     .font(.system(size: 40))
                 Text(" 1. Click the School Portraits button")
                 Text("2. Then, Enter your information and click search")

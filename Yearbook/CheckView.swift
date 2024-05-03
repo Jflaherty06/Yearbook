@@ -23,27 +23,35 @@ struct CheckView: View {
                         VStack() {
                             Text("Check for Yearbook")
                             Text("Purchase")
-                            
                         }
+                        .font(.system(size: 60))
+                        .font(.title)
+                        .foregroundStyle(.white)
+                        .shadow(radius: 20)
+                        .offset(y:-50)
+                    //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                        .fontWeight(.bold)
+                        .padding()
                     }
                     .padding()
                     .fontWeight(.bold)
-                    .font(.custom(
-                        "Arial", fixedSize: 35))
+                    .font(.custom("Arial", fixedSize: 35))
                     .foregroundStyle(.white)
                     .frame(width: geometry.size.width * 0.95, height: geometry.size.height * 0.2, alignment: .center)
                     
                     
                     TextField("Enter Student ID", text: $StudentID)
                         .textFieldStyle(.roundedBorder)
+                        .preferredColorScheme(.light)
+//                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                         .frame(width: geometry.size.width * 0.875, height: geometry.size.height * 0.1)
                         .padding()
                         .onSubmit {
                             let answer = checkID(studentID: StudentID)
-                            if answer == true {
-                                text = "You have purchased a yearbook, thank you!"
-                            } else if answer == false {
-                                text = "You have not purchased a yearbook."
+                            if answer == false {
+                                text = "The ID: \(StudentID) has purchased a yearbook, thank you!"
+                            } else if answer == true {
+                                text = "The ID: \(StudentID) has not purchased a yearbook."
                             }
                             showingAlert =  true
                         }
@@ -62,22 +70,28 @@ struct CheckView: View {
                         HStack{
                             Button {
                                 let answer = checkID(studentID: StudentID)
-                                if answer == true {
-                                    text = "You have purchased a yearbook, thank you!"
-                                } else if answer == false {
-                                    text = "You have not purchased a yearbook"
+                                if answer == false {
+                                    text = "The ID: \(StudentID) has purchased a yearbook, thank you!"
+                                } else if answer == true {
+                                    text = "The ID: \(StudentID) has not purchased a yearbook."
                                 }
                                 showingAlert =  true
                                 StudentID = ""
                                 
                             } label: {
-                                Text("Check ID")
-                                    .padding()
-                                    .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
-                                    .font(.system(size: geometry.size.height * 0.032))
-                                    .background(Color.orange)
-                                    .foregroundColor(.black)
-                                    .cornerRadius(10)
+                                HStack {
+                                    Text("Check ID")
+                                        .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+                                }
+                                .font(.system(size: geometry.size.height * 0.032))
+                                .fontWeight(.bold)
+                                .padding()
+                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                .foregroundColor(.white)
+                                .textFieldStyle(.roundedBorder)
+                                .background(.white)
+                                .cornerRadius(20.0)
+                                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                             }
                         }
                         //                        .alert("\(text)", isPresented: $showingAlert) {
@@ -89,13 +103,17 @@ struct CheckView: View {
                             NavigationLink(destination: BuyView()) {
                                 HStack {
                                     Text("Buy yearbook")
+                                        .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
                                 }
-                                .padding()
-                                .frame(width: geometry.size.width * 0.5, height:geometry.size.height * 0.09)
                                 .font(.system(size: geometry.size.height * 0.032))
-                                .background(Color.orange)
-                                .foregroundColor(.black)
-                                .cornerRadius(10)
+                                .fontWeight(.bold)
+                                .padding()
+                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                .foregroundColor(.white)
+                                .textFieldStyle(.roundedBorder)
+                                .background(.white)
+                                .cornerRadius(20.0)
+                                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                             }
                         }
                     }
@@ -103,14 +121,14 @@ struct CheckView: View {
             }
         }
     }
-        
-        func checkID(studentID: String) -> Bool {
-            for number in viewModel.idNumbers {
-                if number == studentID {
-                    return true
-                }
+    
+    func checkID(studentID: String) -> Bool {
+        for number in viewModel.idNumbers {
+            if number == studentID {
+                return true
             }
-            return false
         }
+        return false
     }
+}
 
