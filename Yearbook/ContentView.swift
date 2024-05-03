@@ -29,16 +29,16 @@ struct ContentView: View {
                                             .foregroundStyle(.white)
                                             .shadow(radius: 20)
                                             .offset(y:-50)
-                                        //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
+                                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
                                             .fontWeight(.bold)
-                                            .padding()
-                                        
                                         
                                         Image("hersey")
                                             .resizable()
-                                            .frame(width: 120, height: 120)
-                                            .scaledToFill()
-                                            
+                                            .offset(y:-25)
+                                            .frame(width: 150, height: 150)
+                                            .padding()
+//                                            .scaledToFill()
+                                        
                                         Group {
                                             HStack {
                                                 NavigationLink(destination: CheckView()) {
@@ -47,37 +47,47 @@ struct ContentView: View {
                                                             .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
                                                     }
                                                     .font(.system(size: geometry.size.height * 0.032))
+                                                    .fontWeight(.bold)
                                                     .padding()
                                                     .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
                                                     .foregroundColor(.white)
                                                     .textFieldStyle(.roundedBorder)
-                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                                    
+                                                    .background(.white)
+                                                    .cornerRadius(20.0)
+                                                    .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                                                 }
                                             }
                                             HStack{
                                                 NavigationLink(destination: BuyView()) {
                                                     HStack {
                                                         Text("Buy yearbook")
+                                                            .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
                                                     }
                                                     .font(.system(size: geometry.size.height * 0.032))
                                                     .fontWeight(.bold)
                                                     .padding()
                                                     .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
-                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                                    .foregroundColor(.white)
+                                                    .textFieldStyle(.roundedBorder)
+                                                    .background(.white)
+                                                    .cornerRadius(20.0)
+                                                    .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                                                 }
                                             }
                                             NavigationLink(destination: ChoosePhotoView()) {
                                                 HStack {
                                                     Text("Choose Yearbook Photo")
+                                                        .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
                                                 }
                                                 .font(.system(size: geometry.size.height * 0.032))
                                                 .fontWeight(.bold)
                                                 .padding()
                                                 .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
-                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                                .foregroundColor(.white)
+                                                .textFieldStyle(.roundedBorder)
+                                                .background(.white)
+                                                .cornerRadius(20.0)
+                                                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                                             }
                                         }
                                         .padding()
