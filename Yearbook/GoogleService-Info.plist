@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.jhhs.Yearbook</string>
+	<string>org.jhhs.626291.Yearbook</string>
 	<key>PROJECT_ID</key>
 	<string>yearbookdatabase-9dfda</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:510321318672:ios:7a77f4741663d6225b6395</string>
+	<string>1:510321318672:ios:8288df082fcef5765b6395</string>
 	<key>DATABASE_URL</key>
 	<string>https://yearbookdatabase-9dfda-default-rtdb.firebaseio.com</string>
 </dict>

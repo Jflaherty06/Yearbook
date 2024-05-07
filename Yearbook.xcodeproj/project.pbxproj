@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C874EC42B5ADF8B00746D82 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C874EC32B5ADF8B00746D82 /* BuyView.swift */; };
+		8C141B002BDFF4DE0092121B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C141AFF2BDFF4DE0092121B /* GoogleService-Info.plist */; };
 		8C5F28052B5ADB7C000C44F7 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F28042B5ADB7C000C44F7 /* CheckView.swift */; };
 		8CFA61EC2B7297BD0067BA75 /* CheckViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA61EB2B7297BD0067BA75 /* CheckViewModel.swift */; };
 		AABA35712B2235500030966B /* YearbookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABA35702B2235500030966B /* YearbookApp.swift */; };
@@ -17,7 +18,11 @@
 		E10783552B87AF1A0051DF7E /* InfiniteCampusWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */; };
 		E11F78422B5ADA7500B4B83B /* ChoosePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */; };
 		E133C7332BAB3E41007E7DA8 /* VipPhotosWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */; };
-		E1C60EDA2BD02A1E00D92489 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1C60ED92BD02A1E00D92489 /* GoogleService-Info.plist */; };
+		E136804D2B6D5094002E8EA5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E136804C2B6D5094002E8EA5 /* FirebaseAnalytics */; };
+		E136804F2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E136804E2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion */; };
+		E13680512B6D5094002E8EA5 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E13680502B6D5094002E8EA5 /* FirebaseAnalyticsSwift */; };
+		E13680532B6D5094002E8EA5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E13680522B6D5094002E8EA5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		E13680552B6D5094002E8EA5 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = E13680542B6D5094002E8EA5 /* FirebaseAppCheck */; };
 		E1D4693D2B729FB3001F08CB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E1D4693C2B729FB3001F08CB /* FirebaseDatabase */; };
 		E1D4693F2B729FB9001F08CB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1D4693E2B729FB9001F08CB /* FirebaseDatabaseSwift */; };
 		E1D469412B72A122001F08CB /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D469402B72A122001F08CB /* StudentModel.swift */; };
@@ -25,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0C874EC32B5ADF8B00746D82 /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
+		8C141AFF2BDFF4DE0092121B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C5F28042B5ADB7C000C44F7 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		8CFA61EB2B7297BD0067BA75 /* CheckViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CheckViewModel.swift; path = "Preview Content/CheckViewModel.swift"; sourceTree = "<group>"; };
 		AABA356D2B2235500030966B /* Yearbook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yearbook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +41,6 @@
 		E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteCampusWebView.swift; sourceTree = "<group>"; };
 		E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePhotoView.swift; sourceTree = "<group>"; };
 		E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipPhotosWebView.swift; sourceTree = "<group>"; };
-		E1C60ED92BD02A1E00D92489 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E1D469402B72A122001F08CB /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +87,7 @@
 				E1D469402B72A122001F08CB /* StudentModel.swift */,
 				E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */,
 				AABA35742B2235530030966B /* Assets.xcassets */,
-				E1C60ED92BD02A1E00D92489 /* GoogleService-Info.plist */,
+				8C141AFF2BDFF4DE0092121B /* GoogleService-Info.plist */,
 				AABA35762B2235530030966B /* Preview Content */,
 			);
 			path = Yearbook;
@@ -170,7 +175,7 @@
 			files = (
 				AABA35782B2235530030966B /* Preview Assets.xcassets in Resources */,
 				AABA35752B2235530030966B /* Assets.xcassets in Resources */,
-				E1C60EDA2BD02A1E00D92489 /* GoogleService-Info.plist in Resources */,
+				8C141B002BDFF4DE0092121B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +206,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -264,6 +270,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -323,7 +330,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yearbook/Preview Content\"";
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				DEVELOPMENT_TEAM = K6KD9JPKR2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,7 +344,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Yearbook;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.626291.Yearbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yearbook/Preview Content\"";
-				DEVELOPMENT_TEAM = BWYT76Q3DS;
+				DEVELOPMENT_TEAM = K6KD9JPKR2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -367,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.Yearbook;
+				PRODUCT_BUNDLE_IDENTIFIER = org.jhhs.626291.Yearbook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
