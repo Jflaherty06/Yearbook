@@ -12,9 +12,9 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             HStack {
-                NavigationSplitView {
-                    Text(instructions)
-                } detail: {
+//                NavigationSplitView {
+//                    Text(instructions)
+//                } detail: {
                     NavigationStack {
                         ZStack {
                             Color.gray
@@ -37,7 +37,6 @@ struct ContentView: View {
                                             .offset(y:-25)
                                             .frame(width: 150, height: 150)
                                             .padding()
-//                                            .scaledToFill()
                                         
                                         Group {
                                             HStack {
@@ -57,38 +56,38 @@ struct ContentView: View {
                                                     .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                                                 }
                                             }
-                                            HStack{
-                                                NavigationLink(destination: BuyView()) {
-                                                    HStack {
-                                                        Text("Buy yearbook")
-                                                            .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
-                                                    }
-                                                    .font(.system(size: geometry.size.height * 0.032))
-                                                    .fontWeight(.bold)
-                                                    .padding()
-                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.white)
-                                                    .textFieldStyle(.roundedBorder)
-                                                    .background(.white)
-                                                    .cornerRadius(20.0)
-                                                    .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
-                                                }
-                                            }
-                                            NavigationLink(destination: ChoosePhotoView()) {
-                                                HStack {
-                                                    Text("Choose Yearbook Photo")
-                                                        .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
-                                                }
-                                                .font(.system(size: geometry.size.height * 0.032))
-                                                .fontWeight(.bold)
-                                                .padding()
-                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                .foregroundColor(.white)
-                                                .textFieldStyle(.roundedBorder)
-                                                .background(.white)
-                                                .cornerRadius(20.0)
-                                                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
-                                            }
+//                                            HStack{
+//                                                NavigationLink(destination: BuyView()) {
+//                                                    HStack {
+//                                                        Text("Buy yearbook")
+//                                                            .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+//                                                    }
+//                                                    .font(.system(size: geometry.size.height * 0.032))
+//                                                    .fontWeight(.bold)
+//                                                    .padding()
+//                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+//                                                    .foregroundColor(.white)
+//                                                    .textFieldStyle(.roundedBorder)
+//                                                    .background(.white)
+//                                                    .cornerRadius(20.0)
+//                                                    .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
+//                                                }
+//                                            }
+//                                            NavigationLink(destination: ChoosePhotoView()) {
+//                                                HStack {
+//                                                    Text("Choose Yearbook Photo")
+//                                                        .foregroundColor(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+//                                                }
+//                                                .font(.system(size: geometry.size.height * 0.032))
+//                                                .fontWeight(.bold)
+//                                                .padding()
+//                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+//                                                .foregroundColor(.white)
+//                                                .textFieldStyle(.roundedBorder)
+//                                                .background(.white)
+//                                                .cornerRadius(20.0)
+//                                                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
+//                                            }
                                         }
                                         .padding()
                                     }
@@ -98,7 +97,7 @@ struct ContentView: View {
                             
                         }
                     }
-                }
+//                }
             }
         }
     }
