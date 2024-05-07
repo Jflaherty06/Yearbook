@@ -2,7 +2,7 @@
 //  YearbookApp.swift
 //  Yearbook
 //
-//  Created by Jak Flaherty on 12/7/23.
+//  Created by ... on 12/7/23.
 //
 
 import SwiftUI

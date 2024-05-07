@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ChoosePhotoView: View {
     var body: some View {
+        //Not currently being used in current version of app
         GeometryReader { geometry in
             ZStack{
                 Color.gray

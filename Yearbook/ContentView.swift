@@ -12,79 +12,54 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
             HStack {
-                NavigationSplitView {
-                    Text(instructions)
-                } detail: {
-                    NavigationStack {
-                        ZStack {
-                            Color.gray
-                                .ignoresSafeArea()
-                          
-                            VStack{
-                                ZStack(alignment: .trailing) {
-                                    VStack {
-                                        Text("2024 Yearbook Wrapped")
-                                            .font(.system(size: 60))
-                                            .font(.title)
-                                            .foregroundStyle(.white)
-                                            .shadow(radius: 20)
-                                            .offset(y:-50)
-                                        //  .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.1)
-                                            .fontWeight(.bold)
-                                            .padding()
-                                        
-                                        
-                                        Image("hersey")
-                                            .resizable()
-                                            .frame(width: 120, height: 120)
-                                            .scaledToFill()
-                                            
-                                        Group {
-                                            HStack {
-                                                NavigationLink(destination: CheckView()) {
-                                                    HStack {
-                                                        Text("Check for Yearbook Purchase")
-                                                        .foregroundColor(.orange)                                        }
-                                                    .font(.system(size: geometry.size.height * 0.032))
-                                                    .padding()
-                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.white)
-                                                    .textFieldStyle(.roundedBorder)
-                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                                    
-                                                }
-                                            }
-                                            HStack{
-                                                NavigationLink(destination: BuyView()) {
-                                                    HStack {
-                                                        Text("Buy yearbook")
-                                                    }
-                                                    .font(.system(size: geometry.size.height * 0.032))
-                                                    .fontWeight(.bold)
-                                                    .padding()
-                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-                                                    .foregroundColor(.orange)
-                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-                                                }
-                                            }
-//                                            HStack{
-//                                                NavigationLink(destination: BuyView()) {
-//                                                    HStack {
-//                                                        
-//                                                        Text("Check for Yearbook Purchase")
-//                                                        .foregroundColor(.orange)                                        }
-//                                                    .font(.system(size: geometry.size.height * 0.032))
-//                                                    .padding()
-//                                                    .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
-//                                                    .foregroundColor(.black)
-//                                                    .textFieldStyle(.roundedBorder)
-//                                                    .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
-//                                                    
-//                                                }
-//                                            }
-                                            NavigationLink(destination: ChoosePhotoView()) {
+                // In Progress
+                //                NavigationSplitView {
+                //                    Text(instructions)
+                //                } detail: {
+                NavigationStack {
+                    ZStack {
+                        Color.gray
+                            .ignoresSafeArea()
+                        
+                        VStack{
+                            ZStack(alignment: .trailing) {
+                                VStack {
+                                    Text("2024 Yearbook Wrapped")
+                                        .font(.system(size: 60))
+                                        .font(.title)
+                                        .foregroundStyle(.white)
+                                        .shadow(radius: 20)
+                                        .offset(y:-50)
+                                        .fontWeight(.bold)
+                                        .padding()
+                                    
+                                    
+                                    Image("hersey")
+                                        .resizable()
+                                        .frame(width: 120, height: 120)
+                                        .scaledToFill()
+                                    
+                                    Group {
+                                        HStack {
+                                            NavigationLink(destination: CheckView()) {
                                                 HStack {
-                                                    Text("Choose Yearbook Photo")
+                                                    Text("Check for Yearbook Purchase")
+                                                        .foregroundColor(.orange)
+                                                        .fontWeight(.bold)
+                                                }
+                                                .font(.system(size: geometry.size.height * 0.032))
+                                                .padding()
+                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                                .foregroundColor(.white)
+                                                .textFieldStyle(.roundedBorder)
+                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                                
+                                            }
+                                        }
+                                        HStack{
+                                            NavigationLink(destination: BuyView()) {
+                                                HStack {
+                                                    Text("Buy yearbook")
                                                 }
                                                 .font(.system(size: geometry.size.height * 0.032))
                                                 .fontWeight(.bold)
@@ -94,19 +69,35 @@ struct ContentView: View {
                                                 .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
                                             }
                                         }
-                                        .padding()
+                                        
+                                        
+                                        //In Progress
+                                        
+                                        //                                         NavigationLink(destination: ChoosePhotoView()) {
+                                        //                                                HStack {
+                                        //                                                    Text("Choose Yearbook Photo")
+                                        //                                                }
+                                        //                                                .font(.system(size: geometry.size.height * 0.032))
+                                        //                                                .fontWeight(.bold)
+                                        //                                                .padding()
+                                        //                                                .frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.07)
+                                        //                                                .foregroundColor(.orange)
+                                        //                                                .background(RoundedRectangle(cornerRadius: 20.0).fill(.white))
+                                        //                                            }
                                     }
                                     .padding()
                                 }
+                                .padding()
                             }
-                            
                         }
+                        
                     }
                 }
             }
         }
     }
 }
+//}
 #Preview {
     ContentView()
 }
