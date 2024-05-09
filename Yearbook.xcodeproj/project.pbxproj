@@ -18,11 +18,6 @@
 		E10783552B87AF1A0051DF7E /* InfiniteCampusWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10783542B87AF1A0051DF7E /* InfiniteCampusWebView.swift */; };
 		E11F78422B5ADA7500B4B83B /* ChoosePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11F78412B5ADA7500B4B83B /* ChoosePhotoView.swift */; };
 		E133C7332BAB3E41007E7DA8 /* VipPhotosWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E133C7322BAB3E41007E7DA8 /* VipPhotosWebView.swift */; };
-		E136804D2B6D5094002E8EA5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E136804C2B6D5094002E8EA5 /* FirebaseAnalytics */; };
-		E136804F2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E136804E2B6D5094002E8EA5 /* FirebaseAnalyticsOnDeviceConversion */; };
-		E13680512B6D5094002E8EA5 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E13680502B6D5094002E8EA5 /* FirebaseAnalyticsSwift */; };
-		E13680532B6D5094002E8EA5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E13680522B6D5094002E8EA5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		E13680552B6D5094002E8EA5 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = E13680542B6D5094002E8EA5 /* FirebaseAppCheck */; };
 		E1D4693D2B729FB3001F08CB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E1D4693C2B729FB3001F08CB /* FirebaseDatabase */; };
 		E1D4693F2B729FB9001F08CB /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E1D4693E2B729FB9001F08CB /* FirebaseDatabaseSwift */; };
 		E1D469412B72A122001F08CB /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D469402B72A122001F08CB /* StudentModel.swift */; };
@@ -330,7 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yearbook/Preview Content\"";
-				DEVELOPMENT_TEAM = K6KD9JPKR2;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -360,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Yearbook/Preview Content\"";
-				DEVELOPMENT_TEAM = K6KD9JPKR2;
+				DEVELOPMENT_TEAM = BWYT76Q3DS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -83,6 +83,7 @@ struct CheckView: View {
                                 StudentID = ""
                             }
                         Text(text)
+                            .foregroundColor(.white)
                         
                         //                        .alert("\(text)", isPresented: $showingAlert) {
                         //                            Button("Ok", role: .cancel) { }
