@@ -23,15 +23,16 @@ struct CheckView: View {
                     .ignoresSafeArea()
                 VStack {
                     ZStack {
-                        HStack {
-                            Text("<Back")
-                                .foregroundStyle(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
-                                .bold()
-                                .onTapGesture {
-                                    presentationMode.wrappedValue.dismiss()
-                                }
-                            Spacer()
-                        }
+                            HStack {
+                                Image(systemName: "chevron.backward")
+                                Text("Back")
+                                Spacer()
+                            }
+                            .foregroundStyle(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+                            .bold()
+                            .onTapGesture {
+                                presentationMode.wrappedValue.dismiss()
+                            }
                         HStack {
                             Spacer()
                             Text("Check for Yearbook Purchase")
@@ -68,6 +69,8 @@ struct CheckView: View {
                             .padding()
                             .background(.black.opacity(0.2))
                             .clipShape(RoundedRectangle(cornerRadius: 6))
+                            .padding(.bottom)
+
                         //                        .textFieldStyle(.roundedBorder)
                         //                        .preferredColorScheme(.light)
                         //                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
@@ -84,7 +87,9 @@ struct CheckView: View {
                             }
                         Text(text)
                             .foregroundColor(.white)
-                        
+                            .font(.system(size: 18))
+                            .fontWeight(.bold)
+                            
                         //                        .alert("\(text)", isPresented: $showingAlert) {
                         //                            Button("Ok", role: .cancel) { }
                         //                            NavigationLink(destination: BuyView()
@@ -125,7 +130,7 @@ struct CheckView: View {
                                     .cornerRadius(20.0)
                                     .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
                                 }
-                                
+                                .padding(.top)
                             }
                             //                        .alert("\(text)", isPresented: $showingAlert) {
                             //                            Button("Ok", role: .cancel) { StudentID = "" }
@@ -153,11 +158,13 @@ struct CheckView: View {
                         }
                     }
                     .padding()
+                    .padding(.leading)
                     Image("hersey")
                         .resizable()
                         .offset(y:-25)
                         .frame(width: 300, height: 300)
                         .padding()
+                        .shadow(radius: 100)
                 }
             }
             .navigationBarBackButtonHidden()
