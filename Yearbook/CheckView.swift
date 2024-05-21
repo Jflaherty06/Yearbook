@@ -1,4 +1,5 @@
 import Foundation
+import ConfettiSwiftUI
 import SwiftUI
 
 
@@ -11,7 +12,7 @@ struct CheckView: View {
     @State var purchased:Bool = true
     @State var text = ""
     @State var showingAlert = false
-    
+    @State private var counter = 0
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -23,16 +24,16 @@ struct CheckView: View {
                     .ignoresSafeArea()
                 VStack {
                     ZStack {
-                            HStack {
-                                Image(systemName: "chevron.backward")
-                                Text("Back")
-                                Spacer()
-                            }
-                            .foregroundStyle(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
-                            .bold()
-                            .onTapGesture {
-                                presentationMode.wrappedValue.dismiss()
-                            }
+                        HStack {
+                            Image(systemName: "chevron.backward")
+                            Text("Back")
+                            Spacer()
+                        }
+                        .foregroundStyle(Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0))
+                        .bold()
+                        .onTapGesture {
+                            presentationMode.wrappedValue.dismiss()
+                        }
                         HStack {
                             Spacer()
                             Text("Check for Yearbook Purchase")
@@ -70,7 +71,7 @@ struct CheckView: View {
                             .background(.black.opacity(0.2))
                             .clipShape(RoundedRectangle(cornerRadius: 6))
                             .padding(.bottom)
-
+                        
                         //                        .textFieldStyle(.roundedBorder)
                         //                        .preferredColorScheme(.light)
                         //                        .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
@@ -79,17 +80,20 @@ struct CheckView: View {
                                 let answer = checkID(studentID: StudentID)
                                 if answer == false {
                                     text = "The ID: \(StudentID) has purchased a yearbook, thank you!"
+                                    counter += 1
                                 } else if answer == true {
                                     text = "The ID: \(StudentID) has not purchased a yearbook."
+                                    counter += 1
                                 }
                                 showingAlert =  true
                                 StudentID = ""
                             }
+                            .confettiCannon(counter: $counter, colors: [.brown, .orange], rainHeight: 1000.0, radius: 500.0)
                         Text(text)
                             .foregroundColor(.white)
                             .font(.system(size: 18))
                             .fontWeight(.bold)
-                            
+                        
                         //                        .alert("\(text)", isPresented: $showingAlert) {
                         //                            Button("Ok", role: .cancel) { }
                         //                            NavigationLink(destination: BuyView()
@@ -106,8 +110,10 @@ struct CheckView: View {
                                     let answer = checkID(studentID: StudentID)
                                     if answer == true {
                                         text = "The ID: \(StudentID) has purchased a yearbook, thank you!"
+                                        counter += 1
                                     } else if answer == false {
                                         text = "The ID: \(StudentID) has not purchased a yearbook."
+                                        counter += 1
                                     }
                                     showingAlert =  true
                                     StudentID = ""
@@ -129,8 +135,10 @@ struct CheckView: View {
                                     .background(.white)
                                     .cornerRadius(20.0)
                                     .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), lineWidth: 4))
-                                }
+                                    .confettiCannon(counter: $counter, colors: [.brown, .orange], rainHeight: 1000.0, radius: 500.0)                                }
                                 .padding(.top)
+                                
+                                
                             }
                             //                        .alert("\(text)", isPresented: $showingAlert) {
                             //                            Button("Ok", role: .cancel) { StudentID = "" }
@@ -179,5 +187,6 @@ struct CheckView: View {
         }
         return false
     }
+ 
 }
 
