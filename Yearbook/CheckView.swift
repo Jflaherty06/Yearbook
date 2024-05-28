@@ -173,11 +173,10 @@ struct CheckView: View {
                         .padding()
                         .shadow(radius: 100)
                 }
-                Button("Hello") {
+                Button("") {
                     confettiCheck(confettiOn: confettiOn)
                 }
                 .confettiCannon(counter: $counter, colors: [Color(red: 82/255.0, green: 53/255.0, blue: 40/255.0), Color(red: 252/255.0, green: 103/255.0, blue: 26/255.0)], rainHeight: 1000.0, radius: 500.0)
-//                .opacity(0)
             }
             .navigationBarBackButtonHidden()
         }
