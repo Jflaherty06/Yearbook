@@ -200,4 +200,3 @@ struct CheckView: View {
         }
     }
 }
-
