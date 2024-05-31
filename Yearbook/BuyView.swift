@@ -10,7 +10,7 @@ import SwiftUI
 import SafariServices
 
 struct BuyView: View {
-    //Webpage won't load on school ipad but on a newer one everything here works fine
+    
     @State private var isPresentWebView = false
     var body: some View {
         GeometryReader { geometry in
